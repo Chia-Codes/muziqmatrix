@@ -73,6 +73,23 @@
 /* Main Content */
 
     /* Genre Buttons */
+.genre {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #4bec2a, #44a82d);
+    border-radius: 45px;
+    margin: 10px;
+}
+
+/* Center genre buttons */
+.genre-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
    /* Artist Profiles */
 
