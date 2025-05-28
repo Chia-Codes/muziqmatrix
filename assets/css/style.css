@@ -33,16 +33,14 @@
     align-items: center;
 }
 
-main, footer {
+    main, footer {
     /* Ensure main and footer are behind the canvas */
     position: relative;
     z-index: -1;
-}
-
-    /* Enter Button */
+}   
 
 /* Navbar */
-.navbar {
+    .navbar {
     width: 100%;
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -60,7 +58,7 @@ main, footer {
     z-index: 1;
 }
 
-.games-btn {
+    .games-btn {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     font-weight: bold;
@@ -71,28 +69,56 @@ main, footer {
 
 }
 
-.nav-link {
+    .nav-link {
     color: var(--primary-color);
     font-weight: bold;
 }
-/* Canvas */
-#canvas{
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
 
-  /* Puts canvas above other elements */
-  z-index: 0;
+/* Canvas */
+    #canvas{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+    /* Puts canvas above other elements */
+    z-index: 0;
 }
 
-    /* Landing page */
+/* Landing page */
+    #landing-page {
+    font-family: var(--secondary-font);
 
+    /* Center the landing page content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* Ensure text is readable */
+    font-size: 1.5rem;
+    text-align: center; 
+
+
+    /* Puts content above canvas */
+    position: relative;
+    z-index: 1;
+}
+
+/* Enter Button */
+    #enter-btn {
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    border-radius: 45px;
+}
 
 /* Main Content */
 
-    /* Genre Buttons */
-.genre {
+/* Genre Buttons */
+    .genre {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     font-weight: bold;
@@ -103,7 +129,7 @@ main, footer {
 }
 
 /* Center genre buttons */
-.genre-btns {
+    .genre-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -114,7 +140,7 @@ main, footer {
 
 
 /* Footer */
-#footer {
+    #footer {
     width: 100%;
     background-color: var(--secondary-color);
     color: var(--primary-color);
