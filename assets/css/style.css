@@ -32,6 +32,13 @@
     flex-direction: column;
     align-items: center;
 }
+
+main, footer {
+    /* Ensure main and footer are behind the canvas */
+    position: relative;
+    z-index: -1;
+}
+
     /* Enter Button */
 
 /* Navbar */
@@ -48,6 +55,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* Ensure navbar is above canvas */
+    z-index: 1;
 }
 
 .games-btn {
@@ -65,7 +75,16 @@
     color: var(--primary-color);
     font-weight: bold;
 }
-    /* Canvas */
+/* Canvas */
+#canvas{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+
+  /* Puts canvas above other elements */
+  z-index: 0;
+}
 
     /* Landing page */
 
