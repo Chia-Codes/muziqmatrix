@@ -19,7 +19,7 @@
     --container-background-color: #c3c5c4 ; /* Light Grey */ 
 }
 
-    /* Global Styles */
+/* Global Styles */
 
     body {
     font-family: var(--primary-font);
@@ -32,12 +32,7 @@
     flex-direction: column;
     align-items: center;
 }
-
-
-    /* Buttons */
     /* Enter Button */
-
-    /* Genre Buttons */
 
 /* Navbar */
 .navbar {
@@ -75,12 +70,14 @@
     /* Landing page */
 
 
-    /* Main Content */
+/* Main Content */
+
+    /* Genre Buttons */
 
    /* Artist Profiles */
 
 
-    /* Footer */
+/* Footer */
 #footer {
     width: 100%;
     background-color: var(--secondary-color);
