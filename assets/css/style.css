@@ -1,5 +1,5 @@
 
-/* Google Fonts */
+    /* Google Fonts */
     /* Tektur */
     @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
     /* Goldman */
@@ -7,6 +7,17 @@
     /* Bruno Ace */
     @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
+    
+    /* CSS Variables */
+
+:root {
+    --primary-font: 'Tektur', sans-serif;
+    --secondary-font: 'Goldman', serif;
+    --primary-color: #4bec2a; /* Green */
+    --secondary-color: #000000; /* Black */
+    --container-text-color: #215016; /* Dark Green */
+    --container-background-color: #c3c5c4 ; /* Light Grey */ 
+}
 
     /* Global Styles */
     
