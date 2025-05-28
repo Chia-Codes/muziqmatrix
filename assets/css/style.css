@@ -1,5 +1,5 @@
 
-    /* Google Fonts */
+/* Google Fonts */
     /* Tektur */
     @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
     /* Goldman */
@@ -8,7 +8,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
     
-    /* CSS Variables */
+/* CSS Variables */
 
 :root {
     --primary-font: 'Tektur', sans-serif;
@@ -27,8 +27,38 @@
 
     /* Genre Buttons */
 
-    /* Navbar */
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 30px;
+    font-family: var(--secondary-font); 
+    background: linear-gradient(135deg, #0f0f0f, #2b2828); 
 
+    /* Display items at either end of the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games-btn {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    border-radius: 45px;
+    box-shadow: #215016 0px 0px 10px;
+
+    /* Give breathing room */
+    margin-right: 35px;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    font-weight: bold;
+}
     /* Canvas */
 
     /* Landing page */
