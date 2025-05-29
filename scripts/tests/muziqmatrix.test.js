@@ -8,7 +8,7 @@ const {  } = require("../muziqmatrix");
 //Runs before each test is run
 // Creates a mock html to test on
 beforeEach(() => {
-    document.body.innerHTML = "<p id='par'></p>";
+    document.body.innerHTML = ``;
 });
 
 
@@ -19,6 +19,3 @@ beforeAll(() => {
     document.body.innerHTML = fileContents;
 })
 
-test("Jest should pass 1 test", () => {
-  expect(1 + 1).toBe(2);
-});
