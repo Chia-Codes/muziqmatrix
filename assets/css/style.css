@@ -135,6 +135,13 @@
     justify-content: center;
 }
 
+/* Games */
+/*hidden class to hide games when not in use */
+.hidden {
+  display: none;
+}
+
+/* Music Quiz */
 
    /* Artist Profiles */
 
