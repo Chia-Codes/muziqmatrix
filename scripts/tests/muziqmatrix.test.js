@@ -28,6 +28,7 @@ describe("Landing page tests", () => {
     });
 });
 
+// Games Button
 describe("Games button tests", () => {
     // Test for home page to be hidden
     test("home page hides when games button is clicked", () => {
@@ -41,11 +42,18 @@ describe("Games button tests", () => {
   });
 });
 
+//Music Quiz
 describe("Music quiz tests", () => {
   test("loads the first quiz question", () => {
     loadQuestion();
     const questionText = $("#quiz-question").text();
     expect(questionText).toBe(quizData[0].question);
   });
+  test("displays question answer options", () => {
+  loadQuestion(); //calls loadOptions
+  const buttons = $("#quiz-options").children();
+  expect(buttons.length).toBe(quizData[0].options.length);
+  expect($(buttons[0]).text()).toBe(quizData[0].options[0]);
+});
 });
 

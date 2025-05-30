@@ -40,17 +40,27 @@ const quizData = [
 ];
 
 let currentQuestion = 0;
-
+  // Load first question on page load
 function loadQuestion() {
   const question = quizData[currentQuestion];
   $("#quiz-question").text(question.question);
+  loadOptions();
 }
 
+// Load options for the displaed question
+const loadOptions = () => {
+  const options = quizData[currentQuestion].options;
+  $("#quiz-options").empty();
+  options.forEach((options, i) => {
+    $("#quiz-options").append(`<button class="option-btn" data-index="${i}">${options}</button>`);
+  });
+};
 
 
 /** Export functions to work simultaneously with
  * node and browser enviroments 
   */
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { enterBtn, enterBtnClick, gamesBtn, loadQuestion, quizData, currentQuestion };
+  module.exports = { enterBtn, enterBtnClick, gamesBtn, 
+    loadQuestion, quizData, currentQuestion };
 }
