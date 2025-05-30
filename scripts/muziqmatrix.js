@@ -28,6 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
   enterBtnClick();
   gamesBtn();
   loadQuestion();
+  resetQuiz();
 });
 
 
@@ -35,28 +36,9 @@ window.addEventListener("DOMContentLoaded", () => {
 let currentQuestion = 0;
 let score = 0;
 
-// Set starting condition for quiz
-const quizStart = {
-  score: 0,
-  currentQuestion: 0,
-};
-
-const startQuiz = () => {
-  quizStart.score = 0;
-  quizStart.currentQuestion = 0;
-  $("#quiz-score").addClass("hidden"); 
-  $("#quiz-container").removeClass("hidden");  
-  loadQuestion();  
-};
-
-//Ensure button calls startQuiz function
-$("#restart-btn").on("click", () => {
-  startQuiz();
-});
-
-// Load first question on page load
+  // Load first question on page load
 function loadQuestion() {
-  const question = quizData[quizStart.currentQuestion];
+  const question = quizData[currentQuestion];
   $("#quiz-question").text(question.question);
   loadOptions();
 }
@@ -90,6 +72,26 @@ const showScore = (score, total) => {
   console.log("showScore called");
 };
 
+// Set starting condition for quiz
+const startQuiz = {
+  score: 0,
+  currentQuestion: 0,
+};
+
+function resetQuiz() {
+  score = 0;
+  currentQuestion = 0;
+  $("#quiz-score").addClass("hidden");
+  loadQuestion();
+  console.log("Quiz has been reset");
+}
+
+$("#restart-btn").on("click", resetQuiz);
+
+//Ensure button calls startQuiz function
+$("#restart-btn").on("click", () => {
+  resetQuiz();
+});
 
 // Music Quiz data
 /** Correct answers for quiz questions 
@@ -137,5 +139,7 @@ const quizData = [
   */
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { enterBtn, enterBtnClick, gamesBtn, 
-    loadQuestion, quizData, currentQuestion, showScore, startQuiz  };
+    loadQuestion, quizData, currentQuestion, showScore, getScore: () => score,
+  getCurrentQuestion: () => currentQuestion,
+  resetQuiz };
 }
