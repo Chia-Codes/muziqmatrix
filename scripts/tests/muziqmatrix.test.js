@@ -6,7 +6,7 @@ const $ = require("jquery");
 global.$ = $;
 
 //Import functions to test
-const { enterBtnClick, gamesBtn  } = require("../muziqmatrix");
+const { enterBtnClick, gamesBtn, loadQuestion, quizData } = require("../muziqmatrix");
 
 //Runs before each test is run
 // Creates a mock html to test on
@@ -28,9 +28,24 @@ describe("Landing page tests", () => {
     });
 });
 
-describe("Music quiz tests", () => {
+describe("Games button tests", () => {
+    // Test for home page to be hidden
+    test("home page hides when games button is clicked", () => {
+    $(".games-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(true);
+    });
+    // Test to show quiz container
     test("quiz container shows when games button is clicked", () => {
     $(".games-btn").trigger("click");
     expect($("#quiz-container").hasClass("hidden")).toBe(false);
   });
 });
+
+describe("Music quiz tests", () => {
+  test("loads the first quiz question", () => {
+    loadQuestion();
+    const questionText = $("#quiz-question").text();
+    expect(questionText).toBe(quizData[0].question);
+  });
+});
+
