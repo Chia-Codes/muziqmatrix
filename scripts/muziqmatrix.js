@@ -30,24 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
   loadQuestion();
 });
 
-// Music Quiz data
-/** Correct answers for quiz questions 
- * are set up to be the first index of
- * the options array to make the questions 
- * more diverse and changeable.
- */
-const quizData = [
-  {
-    question: "What genre is known for heavy bass and fast rhythms?",
-    options: [ "Drum & Bass", "Jazz", "Rock", "Classical"],
-    answer: ["Drum & Bass"]
-  },
-  {
-    question: "Who was the first woman to have four country albums reach No. 1 on the Billboard 200?",
-    options: [ "Carrie Underwood", "Dolly Parton", "Taylor Swift", "Shania Twain"],
-    answer: ["Carrie Underwood"]
-  },
-];
+
 
 let currentQuestion = 0;
 let score = 0;
@@ -79,6 +62,46 @@ $("#quiz-options").on("click", ".option-btn", e => {
     ? (currentQuestion++, loadQuestion())
     : showScore(); 
 });
+
+// Music Quiz data
+/** Correct answers for quiz questions 
+ * are set up to be the first index of
+ * the options array to make the questions 
+ * more diverse and changeable.
+ */
+const quizData = [
+  {
+    question: "What genre is known for heavy bass and fast rhythms?",
+    options: [ "Drum & Bass", "Jazz", "Rock", "Classical"],
+    answer: ["Drum & Bass"]
+  },
+  {
+    question: "Who was the first woman to have four country albums reach No. 1 on the Billboard 200?",
+    options: [ "Carrie Underwood", "Dolly Parton", "Taylor Swift", "Shania Twain"],
+    answer: ["Carrie Underwood"]
+  },
+  {
+    question: "Who sang the Spongebob Squarepants theme song for the movie?",
+    options: [ "Avril Lavigne", "Frank & The Walters", "Sugarbabes", "Busted"],
+    answer: ["Avril Lavigne"]
+  },
+  {
+    question: "Who is the frontman of 30 Seconds to Mars",
+    options: [ "Jared Leto", "James Lerore", "Leo Jared", "Jared Leo"],
+    answer: ["Jared Leto"]
+  },
+  {
+    question: "Which member of Kiss wore makeup to look like a cat?",
+    options: [ "Peter Criss", "Paul Stanley", "Vinnie Vincent", "Gene Simmons"],
+    answer: ["Peter Criss"]
+  },
+  {
+    question: "John Mayer wrote a song about which law of physics?",
+    options: [ "Gravity", "Nuclear ", "Conservation", "Electromagnetism"],
+    answer: ["Gravity"]
+  },
+  
+];
 
 /** Export functions to work simultaneously with
  * node and browser enviroments 
