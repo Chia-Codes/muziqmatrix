@@ -35,9 +35,28 @@ window.addEventListener("DOMContentLoaded", () => {
 let currentQuestion = 0;
 let score = 0;
 
-  // Load first question on page load
+// Set starting condition for quiz
+const quizStart = {
+  score: 0,
+  currentQuestion: 0,
+};
+
+const startQuiz = () => {
+  quizStart.score = 0;
+  quizStart.currentQuestion = 0;
+  $("#quiz-score").addClass("hidden"); 
+  $("#quiz-container").removeClass("hidden");  
+  loadQuestion();  
+};
+
+//Ensure button calls startQuiz function
+$("#restart-btn").on("click", () => {
+  startQuiz();
+});
+
+// Load first question on page load
 function loadQuestion() {
-  const question = quizData[currentQuestion];
+  const question = quizData[quizStart.currentQuestion];
   $("#quiz-question").text(question.question);
   loadOptions();
 }
@@ -118,5 +137,5 @@ const quizData = [
   */
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { enterBtn, enterBtnClick, gamesBtn, 
-    loadQuestion, quizData, currentQuestion, showScore };
+    loadQuestion, quizData, currentQuestion, showScore, startQuiz  };
 }

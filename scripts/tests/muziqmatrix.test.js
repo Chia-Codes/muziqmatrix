@@ -6,7 +6,7 @@ const $ = require("jquery");
 global.$ = $;
 
 //Import functions to test
-const { enterBtnClick, gamesBtn, loadQuestion, quizData, showScore } = require("../muziqmatrix");
+const { enterBtnClick, gamesBtn, loadQuestion, quizData, showScore, startQuiz } = require("../muziqmatrix");
 
 //Runs before each test is run
 // Creates a mock html to test on
@@ -61,7 +61,9 @@ describe("Music quiz tests", () => {
     expect(q.answer[0]).toBe(q.options[0]);
         });
     });
-    describe("Music quiz tests", () => {
+});
+
+describe("Music quiz scores test", () => {
   test("displays final score correctly and hides quiz", () => {
     let localScore = 0;
     let localCurrentQuestion = 0;
@@ -77,6 +79,5 @@ describe("Music quiz tests", () => {
     expect($("#quiz-container").hasClass("hidden")).toBe(true);
     expect($("#quiz-score").hasClass("hidden")).toBe(false);
     expect($("#score-message").text()).toBe(`You scored ${quizData.length} out of ${quizData.length}`);
-    });
     });
 });
