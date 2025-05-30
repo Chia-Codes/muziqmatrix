@@ -60,8 +60,17 @@ $("#quiz-options").on("click", ".option-btn", e => {
   // loadQuestion is called unless its the last one
   currentQuestion < quizData.length - 1
     ? (currentQuestion++, loadQuestion())
-    : showScore(); 
+    : showScore(score, quizData.length);
 });
+
+// Show score function
+const showScore = (score, total) => {
+  $("#quiz-container").addClass("hidden");
+  $("#quiz-score").removeClass("hidden");
+  $("#score-message").text(`You scored ${score} out of ${total}`);
+  console.log("showScore called");
+};
+
 
 // Music Quiz data
 /** Correct answers for quiz questions 
@@ -86,7 +95,7 @@ const quizData = [
     answer: ["Avril Lavigne"]
   },
   {
-    question: "Who is the frontman of 30 Seconds to Mars",
+    question: "Who is the frontman of 30 Seconds to Mars?",
     options: [ "Jared Leto", "James Lerore", "Leo Jared", "Jared Leo"],
     answer: ["Jared Leto"]
   },
@@ -100,13 +109,14 @@ const quizData = [
     options: [ "Gravity", "Nuclear ", "Conservation", "Electromagnetism"],
     answer: ["Gravity"]
   },
-  
 ];
+
+
 
 /** Export functions to work simultaneously with
  * node and browser enviroments 
   */
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { enterBtn, enterBtnClick, gamesBtn, 
-    loadQuestion, quizData, currentQuestion };
+    loadQuestion, quizData, currentQuestion, showScore };
 }

@@ -68,20 +68,21 @@
         <div class="container text-center mt-5">
             <h2 id="quiz-question">Ready for a music challenge?</h2>
                 <!--Quiz questions-->
-                <div id="quiz-options">
+                <div id="quiz-options" class="mt-5">
                     <button class="quiz-option" id="option1"></button>
                     <button class="quiz-option" id="option2"></button>
                     <button class="quiz-option" id="option3"></button>
                     <button class="quiz-option" id="option4"></button>
                 </div>
-                    <!--Scores-->
-                    <p id="quiz-score">Score: 0</p>
-                    <p id="quiz-progress">Question 0 of 0</p>
-                </div>
-            <button id="next-btn" class="btn btn-primary mt-3">Next Question</button>
             <button id="restart-btn" class="btn btn-secondary mt-3">Restart Quiz</button>
         </div>
     </section>
+    
+    <!--Scores-->
+    <p id="quiz-progress" class="hidden">Question 0 of 0</p>
+    <div id="quiz-score" class="hidden">
+        <p id="score-message"></p>
+    </div>
     
 
     <!--Footer -->

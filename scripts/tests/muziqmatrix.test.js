@@ -6,7 +6,7 @@ const $ = require("jquery");
 global.$ = $;
 
 //Import functions to test
-const { enterBtnClick, gamesBtn, loadQuestion, quizData } = require("../muziqmatrix");
+const { enterBtnClick, gamesBtn, loadQuestion, quizData, showScore } = require("../muziqmatrix");
 
 //Runs before each test is run
 // Creates a mock html to test on
@@ -16,6 +16,7 @@ beforeEach(() => {
     document.body.innerHTML = fileContents;
     enterBtnClick();
     gamesBtn();
+    showScore();
 });
 
 // Tests for landing page
@@ -59,5 +60,23 @@ describe("Music quiz tests", () => {
     quizData.forEach(q => {
     expect(q.answer[0]).toBe(q.options[0]);
         });
+    });
+    describe("Music quiz tests", () => {
+  test("displays final score correctly and hides quiz", () => {
+    let localScore = 0;
+    let localCurrentQuestion = 0;
+    quizData.forEach(q => {
+        localScore++;
+      localCurrentQuestion++;
+    });
+    score = localScore; 
+    currentQuestion = localCurrentQuestion;
+
+    showScore(quizData.length, quizData.length);
+
+    expect($("#quiz-container").hasClass("hidden")).toBe(true);
+    expect($("#quiz-score").hasClass("hidden")).toBe(false);
+    expect($("#score-message").text()).toBe(`You scored ${quizData.length} out of ${quizData.length}`);
+    });
     });
 });
