@@ -16,8 +16,13 @@ enterBtnClick();
 //Show quiz container when games button is clicked
 const gamesBtn = () => {
   $(".games-btn").on("click", () => $("#quiz-container").removeClass("hidden"));
+  //hide home page & content when games button is clicked
+  $(".games-btn").on("click", () => $("#home").addClass("hidden"));
 };
 
+
+
+// Load actions to run after DOM is loaded
 window.addEventListener("DOMContentLoaded", () => {
   enterBtnClick();
   gamesBtn();
