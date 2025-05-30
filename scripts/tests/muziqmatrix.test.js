@@ -2,6 +2,9 @@
  * @jest-environment jsdom
  */
 
+const $ = require("jquery");
+global.$ = $;
+
 //Import functions to test
 const { enterBtnClick, gamesBtn  } = require("../muziqmatrix");
 

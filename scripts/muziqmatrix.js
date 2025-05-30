@@ -1,6 +1,4 @@
 
-//Import for jquery shorthand
-global.$ = require("jquery");
 
 // Function to hide landing page when enter button is clicked
 const enterBtn = () => {
@@ -20,6 +18,14 @@ const gamesBtn = () => {
   $(".games-btn").on("click", () => $("#quiz-container").removeClass("hidden"));
 };
 
+window.addEventListener("DOMContentLoaded", () => {
+  enterBtnClick();
+  gamesBtn();
+});
 
-//Export functions to be used in test
-module.exports = { enterBtn, enterBtnClick, gamesBtn };
+/** Export functions to work simultaneously with
+ * node and browser enviroments 
+  */
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { enterBtn, enterBtnClick, gamesBtn };
+}
