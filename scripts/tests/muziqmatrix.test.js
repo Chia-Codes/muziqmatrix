@@ -48,12 +48,16 @@ describe("Music quiz tests", () => {
     loadQuestion();
     const questionText = $("#quiz-question").text();
     expect(questionText).toBe(quizData[0].question);
-  });
-  test("displays question answer options", () => {
-  loadQuestion(); //calls loadOptions
-  const buttons = $("#quiz-options").children();
-  expect(buttons.length).toBe(quizData[0].options.length);
-  expect($(buttons[0]).text()).toBe(quizData[0].options[0]);
+    });
+    test("displays question answer options", () => {
+    loadQuestion(); //calls loadOptions
+    const buttons = $("#quiz-options").children();
+    expect(buttons.length).toBe(quizData[0].options.length);
+    expect($(buttons[0]).text()).toBe(quizData[0].options[0]);
+    });
+    test("correct answer matches first option ", () => {
+    quizData.forEach(q => {
+    expect(q.answer[0]).toBe(q.options[0]);
+        });
+    });
 });
-});
-
