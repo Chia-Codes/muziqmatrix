@@ -95,9 +95,16 @@ describe("Music quiz tests", () => {
     );
   });
   test("returns to home page when Return Home is clicked", () => {
-  $("#return-home-btn").trigger("click");
-  expect($("#home").hasClass("hidden")).toBe(false);
-});
+    $("#return-home-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(false);
+  });
+  test("add genre btn class for theme consistancy", () => {
+    $(".option-btn").addClass("genre");
+    $("#return-home-btn").addClass("genre");
+    
+    expect($(".option-btn").hasClass("genre")).toBe(true);
+    expect($("#return-home-btn").hasClass("genre")).toBe(true);
+  });
 });
 
 describe("Reset button test", () => {

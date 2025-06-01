@@ -48,6 +48,8 @@ const loadOptions = () => {
       `<button class="option-btn" data-index="${i}">${options}</button>`
     );
   });
+  //Add genre css to add theme consistancy
+  $(".option-btn").addClass("genre"); 
 };
 
 // Selecting correct answer for music quiz
@@ -94,6 +96,10 @@ $("#return-home-btn").on("click", () => {
   $("#quiz-score").addClass("hidden");
   $("#home").removeClass("hidden");
 });
+//Add consistent theme to return-home button
+$("#return-home-btn").addClass("genre");
+
+
 
 // Music Quiz data
 /** Correct answers for quiz questions
