@@ -94,6 +94,10 @@ describe("Music quiz tests", () => {
       `You scored ${quizData.length} out of ${quizData.length}`
     );
   });
+  test("returns to home page when Return Home is clicked", () => {
+  $("#return-home-btn").trigger("click");
+  expect($("#home").hasClass("hidden")).toBe(false);
+});
 });
 
 describe("Reset button test", () => {

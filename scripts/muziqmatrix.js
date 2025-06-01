@@ -67,7 +67,7 @@ const showScore = (score, total) => {
   $("#quiz-container").addClass("hidden");
   $("#quiz-score").removeClass("hidden");
   $("#score-message").text(`You scored ${score} out of ${total}`);
-  console.log("showScore called");
+  $("#return-home-btn").removeClass("hidden"); 
 };
 
 // Set starting condition for quiz
@@ -87,6 +87,12 @@ function resetQuiz() {
 //Ensure button calls restarQuiz function
 $("#restart-btn").on("click", () => {
   resetQuiz();
+});
+
+//Show return home button at quiz end
+$("#return-home-btn").on("click", () => {
+  $("#quiz-score").addClass("hidden");
+  $("#home").removeClass("hidden");
 });
 
 // Music Quiz data
