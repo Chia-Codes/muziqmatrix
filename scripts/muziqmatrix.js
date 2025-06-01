@@ -5,6 +5,9 @@ window.addEventListener("DOMContentLoaded", () => {
   loadQuestion();
   resetQuiz();
   rockBtn();
+  jazzBtn();
+  hiphopBtn();
+  classicalBtn();
 });
 
 // Function to hide landing page when enter button is clicked
@@ -20,8 +23,34 @@ const enterBtnClick = () =>
 // Call function for event listener
 enterBtnClick();
 
+//Genre button functions
+//Rock button
 function rockBtn() {
 $("#rock-btn").on("click", function () {
+    $("#home").addClass("hidden");
+    $("#artist-profiles").removeClass("hidden");
+  });
+};
+
+//Jazz button
+function jazzBtn() {
+$("#jazz-btn").on("click", function () {
+    $("#home").addClass("hidden");
+    $("#artist-profiles").removeClass("hidden");
+  });
+};
+
+//Classical button 
+function classicalBtn() {
+$("#classical-btn").on("click", function () {
+    $("#home").addClass("hidden");
+    $("#artist-profiles").removeClass("hidden");
+  });
+};
+
+//Hip Hop button
+function hiphopBtn() {
+$("#hiphop-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
   });
@@ -175,5 +204,8 @@ if (typeof module !== "undefined" && module.exports) {
     resetQuiz,
     startQuiz,
     rockBtn,
+    jazzBtn,
+    hiphopBtn,
+    classicalBtn,
   };
 }

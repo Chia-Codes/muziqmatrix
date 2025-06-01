@@ -16,6 +16,10 @@ const {
   getScore,
   getCurrentQuestion,
   rockBtn,
+  jazzBtn,
+  classicalBtn,
+  hiphopBtn,
+  artistNavbar,
 } = require("../muziqmatrix");
 
 //Runs before each test is run
@@ -40,6 +44,21 @@ describe("Landing page tests", () => {
   });
 });
 
+//Navbar tests
+describe("Navbar display changes when artist profile is shown", () => {
+  test("'Close' action displayed when artist profiles are visible", () => {
+    $("#artist-profiles").removeClass("hidden");
+    artistNavbar();
+    expect($("#nav-action").text()).toBe("Close");
+  });
+
+  test("Nav go back to default when artist profiles are hidden", () => {
+    $("#artist-profiles").addClass("hidden");
+    artistNavbar();
+    expect($("#nav-action").text()).toBe("Help?");
+  });
+});
+
 // Games Button
 describe("Games button tests", () => {
   // Test for home page to be hidden
@@ -59,17 +78,33 @@ describe("Games button tests", () => {
   });
 });
 
-
 //Artist profiles
 describe("Tests for genre buttons", () => {
-test("Displays artist profiles on click", () => {
+  test("Rcok button displays artist profiles on click", () => {
     rockBtn();
     $("#rock-btn").trigger("click");
     expect($("#home").hasClass("hidden")).toBe(true);
     expect($("#artist-profiles").hasClass("hidden")).toBe(false);
   });
+  test("Jazz button displays artist profiles on click", () => {
+    jazzBtn();
+    $("#jazz-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(true);
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
+  });
+  test("Hiphop button displays artist profiles on click", () => {
+    hiphopBtn();
+    $("#hiphop-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(true);
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
+  });
+  test("Classical button displays artist profiles on click", () => {
+    classicalBtn();
+    $("#classical-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(true);
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
+  });
 });
-
 
 //Music Quiz
 describe("Music quiz tests", () => {
@@ -114,7 +149,7 @@ describe("Music quiz tests", () => {
   test("add genre btn class for theme consistancy", () => {
     $(".option-btn").addClass("genre");
     $("#return-home-btn").addClass("genre");
-    
+
     expect($(".option-btn").hasClass("genre")).toBe(true);
     expect($("#return-home-btn").hasClass("genre")).toBe(true);
   });
