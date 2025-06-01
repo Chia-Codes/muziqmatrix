@@ -99,6 +99,10 @@ $("#return-home-btn").on("click", () => {
 //Add consistent theme to return-home button
 $("#return-home-btn").addClass("genre");
 
+$("#exit-quiz-btn").on("click", () => {
+  $("#quiz-container").addClass("hidden");
+  $("#home").removeClass("hidden");
+});
 
 
 // Music Quiz data

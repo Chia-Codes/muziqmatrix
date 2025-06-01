@@ -107,10 +107,15 @@ describe("Music quiz tests", () => {
   });
 });
 
-describe("Reset button test", () => {
+describe("Reset & exit button test when quiz is open", () => {
   test("resets quiz state when reset button is clicked", () => {
     resetQuiz();
     expect(getScore()).toBe(0);
     expect(getCurrentQuestion()).toBe(0);
+  });
+  test("returns to home page", () => {
+    $("#exit-quiz-btn").trigger("click");
+    expect($("#quiz-container").hasClass("hidden")).toBe(true);
+    expect($("#home").hasClass("hidden")).toBe(false);
   });
 });
