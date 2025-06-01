@@ -36,7 +36,7 @@
     main, footer {
     /* Ensure main and footer are behind the canvas */
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }   
 
 /* Navbar */
@@ -146,9 +146,8 @@
   overflow: hidden;
   max-width: 400px;
   margin: 4rem auto;
-  background-color: #000;
-  border: 2px solid #0f0;
-  box-shadow: 0 0 15px #0f0;
+  background-color: #0000;
+  box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -160,11 +159,10 @@
   overflow: hidden;
   margin: 4rem auto;
   padding: 1rem;
-  
   height: 500px;
   background-color: #000;
-  border: 2px solid #0f0;
-  box-shadow: 0 0 15px #0f0;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
   font-family: var(--primary-font);
   
@@ -183,7 +181,7 @@
 
 .carousel-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px #0f0;
+  box-shadow: 0 0 25px var(--primary-color);
 }
 
 .award-details {
@@ -192,9 +190,10 @@
   align-items: center;
   transition: transform 0.3s;
 }
+
 .award-tag {
-  background: rgba(0, 255, 0, 0.1);
-  border: 1px solid #0f0;
+  background: var(--container-text-color);
+  border: 1px solid var(--primary-color);
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
   font-size: 0.8rem;
@@ -205,17 +204,17 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #000;
-  border: 2px solid #0f0;
-  color: #0f0;
+  background: #0000;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   padding: 0.5rem;
   cursor: pointer;
 }
 
 .carousel-button:hover {
-  background: #0f0;
+  background: var(--primary-color);
   color: #000;
-  box-shadow: 0 0 10px #0f0;
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .carousel-button.prev {

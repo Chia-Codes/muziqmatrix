@@ -15,6 +15,7 @@ const {
   resetQuiz,
   getScore,
   getCurrentQuestion,
+  rockBtn,
 } = require("../muziqmatrix");
 
 //Runs before each test is run
@@ -57,6 +58,18 @@ describe("Games button tests", () => {
     expect(getCurrentQuestion()).toBe(0);
   });
 });
+
+
+//Artist profiles
+describe("Tests for genre buttons", () => {
+test("Displays artist profiles on click", () => {
+    rockBtn();
+    $("#rock-btn").trigger("click");
+    expect($("#home").hasClass("hidden")).toBe(true);
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
+  });
+});
+
 
 //Music Quiz
 describe("Music quiz tests", () => {

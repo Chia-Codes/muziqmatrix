@@ -1,3 +1,12 @@
+// Load actions to run after DOM is loaded
+window.addEventListener("DOMContentLoaded", () => {
+  enterBtnClick();
+  gamesBtn();
+  loadQuestion();
+  resetQuiz();
+  rockBtn();
+});
+
 // Function to hide landing page when enter button is clicked
 const enterBtn = () => {
   ["landing-page", "canvas"].forEach(
@@ -11,6 +20,13 @@ const enterBtnClick = () =>
 // Call function for event listener
 enterBtnClick();
 
+function rockBtn() {
+$("#rock-btn").on("click", function () {
+    $("#home").addClass("hidden");
+    $("#artist-profiles").removeClass("hidden");
+  });
+};
+
 //Music Quiz
 //Show quiz container when games button is clicked
 const gamesBtn = () => {
@@ -20,14 +36,6 @@ const gamesBtn = () => {
   //Call reset quiz until more games are added
   $(".games-btn").on("click", () => resetQuiz());
 };
-
-// Load actions to run after DOM is loaded
-window.addEventListener("DOMContentLoaded", () => {
-  enterBtnClick();
-  gamesBtn();
-  loadQuestion();
-  resetQuiz();
-});
 
 let currentQuestion = 0;
 let score = 0;
@@ -166,5 +174,6 @@ if (typeof module !== "undefined" && module.exports) {
     getCurrentQuestion: () => currentQuestion,
     resetQuiz,
     startQuiz,
+    rockBtn,
   };
 }
