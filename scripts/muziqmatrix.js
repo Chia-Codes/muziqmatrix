@@ -39,6 +39,7 @@ function jazzBtn() {
   $("#jazz-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
+    artistNavbar();
   });
 }
 
@@ -47,6 +48,7 @@ function classicalBtn() {
   $("#classical-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
+    artistNavbar();
   });
 }
 
@@ -55,6 +57,7 @@ function hiphopBtn() {
   $("#hiphop-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
+    artistNavbar();
   });
 }
 
