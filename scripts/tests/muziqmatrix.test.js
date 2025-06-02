@@ -32,6 +32,7 @@ beforeEach(() => {
   gamesBtn();
   showScore();
   resetQuiz();
+  artistNavbar();
 });
 
 // Tests for landing page
@@ -41,21 +42,6 @@ describe("Landing page tests", () => {
     btn.click();
     expect(document.getElementById("landing-page").style.display).toBe("none");
     expect(document.getElementById("canvas").style.display).toBe("none");
-  });
-});
-
-//Navbar tests
-describe("Navbar display changes when artist profile is shown", () => {
-  test("'Close' action displayed when artist profiles are visible", () => {
-    $("#artist-profiles").removeClass("hidden");
-    artistNavbar();
-    expect($("#nav-action").text()).toBe("Close");
-  });
-
-  test("Nav go back to default when artist profiles are hidden", () => {
-    $("#artist-profiles").addClass("hidden");
-    artistNavbar();
-    expect($("#nav-action").text()).toBe("Help?");
   });
 });
 
@@ -75,6 +61,26 @@ describe("Games button tests", () => {
     $(".games-btn").trigger("click");
     expect(getScore()).toBe(0);
     expect(getCurrentQuestion()).toBe(0);
+  });
+  //Show close button when artist profiles displayed
+  describe("Games button returns home when genre button is clicked", () => {
+    test("Games becomes close button and takes user to home page", () => {
+      expect($(".games-btn").text()).toBe("Games");
+      $("#rock-btn").trigger("click");
+      //Time out set for DOM to update
+      setTimeout(() => {
+        expect($(".games-btn").text()).toBe("Close");
+
+        // Return to home page
+        $(".games-btn").trigger("click");
+
+        expect($("#artist-profiles").hasClass("hidden")).toBe(true);
+        expect($("#home").hasClass("hidden")).toBe(false);
+        expect($(".games-btn").text()).toBe("Games");
+        done();
+        // hold for 1 loop
+      }, 0);
+    });
   });
 });
 

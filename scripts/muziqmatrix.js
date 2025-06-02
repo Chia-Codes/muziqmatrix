@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   jazzBtn();
   hiphopBtn();
   classicalBtn();
+  artistNavbar();
 });
 
 // Function to hide landing page when enter button is clicked
@@ -26,35 +27,50 @@ enterBtnClick();
 //Genre button functions
 //Rock button
 function rockBtn() {
-$("#rock-btn").on("click", function () {
+  $("#rock-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
+    artistNavbar();
   });
-};
+}
 
 //Jazz button
 function jazzBtn() {
-$("#jazz-btn").on("click", function () {
+  $("#jazz-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
   });
-};
+}
 
-//Classical button 
+//Classical button
 function classicalBtn() {
-$("#classical-btn").on("click", function () {
+  $("#classical-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
   });
-};
+}
 
 //Hip Hop button
 function hiphopBtn() {
-$("#hiphop-btn").on("click", function () {
+  $("#hiphop-btn").on("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
   });
-};
+}
+
+//Artist profiles
+function artistNavbar() {
+  if (!$("#artist-profiles").hasClass("hidden")) {
+    $(".games-btn")
+      .text("Close")
+      .off("click")
+      .on("click", () => {
+        $("#artist-profiles").addClass("hidden");
+        $("#home").removeClass("hidden");
+        $(".games-btn").text("Games");
+      });
+  }
+}
 
 //Music Quiz
 //Show quiz container when games button is clicked
@@ -86,7 +102,7 @@ const loadOptions = () => {
     );
   });
   //Add genre css to add theme consistancy
-  $(".option-btn").addClass("genre"); 
+  $(".option-btn").addClass("genre");
 };
 
 // Selecting correct answer for music quiz
@@ -106,7 +122,7 @@ const showScore = (score, total) => {
   $("#quiz-container").addClass("hidden");
   $("#quiz-score").removeClass("hidden");
   $("#score-message").text(`You scored ${score} out of ${total}`);
-  $("#return-home-btn").removeClass("hidden"); 
+  $("#return-home-btn").removeClass("hidden");
 };
 
 // Set starting condition for quiz
@@ -118,7 +134,7 @@ const startQuiz = {
 function resetQuiz() {
   score = 0;
   currentQuestion = 0;
-  $("#quiz-score").addClass("hidden")
+  $("#quiz-score").addClass("hidden");
   loadQuestion();
   console.log("Quiz has been reset");
 }
@@ -140,7 +156,6 @@ $("#exit-quiz-btn").on("click", () => {
   $("#quiz-container").addClass("hidden");
   $("#home").removeClass("hidden");
 });
-
 
 // Music Quiz data
 /** Correct answers for quiz questions
@@ -207,5 +222,6 @@ if (typeof module !== "undefined" && module.exports) {
     jazzBtn,
     hiphopBtn,
     classicalBtn,
+    artistNavbar,
   };
 }
