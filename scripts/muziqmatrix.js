@@ -31,6 +31,20 @@ function rockBtn() {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
+    // Card1
+    $("#card1 img").first().attr("src", 
+      "https://creator.nightcafe.studio/jobs/xACAty33yiYLhilWWSje/xACAty33yiYLhilWWSje--1--hi4kq.jpg"
+    );
+    
+     // Card2
+    $("#card2 img").first().attr("src", 
+      "https://images.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+    );
+
+    //Card3
+    $("#card3 img").first().attr("src", 
+      "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+    );
   });
 }
 

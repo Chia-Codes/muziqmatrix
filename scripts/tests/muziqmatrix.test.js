@@ -67,6 +67,9 @@ describe("Games button tests", () => {
     test("Games becomes close button and takes user to home page", () => {
       expect($(".games-btn").text()).toBe("Games");
       $("#rock-btn").trigger("click");
+      $("#jazz-btn").trigger("click");
+      $("#classical-btn").trigger("click");
+      $("#hiphop-btn").trigger("click");
       //Time out set for DOM to update
       setTimeout(() => {
         expect($(".games-btn").text()).toBe("Close");
@@ -86,12 +89,49 @@ describe("Games button tests", () => {
 
 //Artist profiles
 describe("Tests for genre buttons", () => {
-  test("Rcok button displays artist profiles on click", () => {
+    //Rock button
+  test("Rock button displays artist profiles on click", () => {
     rockBtn();
     $("#rock-btn").trigger("click");
     expect($("#home").hasClass("hidden")).toBe(true);
-    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false); 
   });
+  
+  //Card 1
+  //img
+  test ("Rock button artist profile card1 updates", () => {
+    $("#card1 img").attr(
+      "src",
+      "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
+    );
+    expect($("#card1 img").attr("src")).toBe(
+      "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
+    );
+  })
+  //Card 2
+  //img
+  test ("Rock button artist profile card2 updates", () => {
+    $("#card2 img").attr(
+      "src",
+      "https://creator.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+    );
+    expect($("#card2 img").attr("src")).toBe(
+      "https://creator.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+    );
+  })
+  //Card 3
+  //img
+  test ("Rock button artist profile card3 updates", () => {
+    $("#card3 img").attr(
+      "src",
+      "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+    );
+    expect($("#card3 img").attr("src")).toBe(
+      "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+    );
+  })
+
+  
   test("Jazz button displays artist profiles on click", () => {
     jazzBtn();
     $("#jazz-btn").trigger("click");
