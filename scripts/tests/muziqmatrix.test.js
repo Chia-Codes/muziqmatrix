@@ -99,7 +99,7 @@ describe("Tests for genre buttons", () => {
   
   //Card 1
   //img
-  test ("Rock button artist profile card1 updates", () => {
+  test ("Rock button artist profile card1 updates img", () => {
     $("#card1 img").attr(
       "src",
       "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
@@ -108,6 +108,14 @@ describe("Tests for genre buttons", () => {
       "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
     );
   })
+  //Text content
+  test ("Rock button artist profile card1 updates text", () => {
+    $("#card1 h3").text(
+      "Rocky Runs Legacy"
+    );
+    expect($("#card1 h3").text()).toBe(
+      "Rocky Runs Legacy");
+  });
   //Card 2
   //img
   test ("Rock button artist profile card2 updates", () => {
@@ -131,7 +139,7 @@ describe("Tests for genre buttons", () => {
     );
   })
 
-  
+
   test("Jazz button displays artist profiles on click", () => {
     jazzBtn();
     $("#jazz-btn").trigger("click");

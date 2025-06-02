@@ -32,18 +32,45 @@ function rockBtn() {
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
     // Card1
-    $("#card1 img").first().attr("src", 
-      "https://creator.nightcafe.studio/jobs/xACAty33yiYLhilWWSje/xACAty33yiYLhilWWSje--1--hi4kq.jpg"
-    );
-    
-     // Card2
-    $("#card2 img").first().attr("src", 
-      "https://images.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+    //img
+    $("#card1 img")
+      .first()
+      .attr(
+        "src",
+        "https://creator.nightcafe.studio/jobs/xACAty33yiYLhilWWSje/xACAty33yiYLhilWWSje--1--hi4kq.jpg"
+      );
+    //h3
+    $("#card1 h3").text("Rocky Runs Legacy");
+    //paragragh
+    $("#card1 p").text(
+      "Born of Earth, forged among stars — Rocky Runs Legacy is more than a name, it’s a force! A legacy not bound by time or planet, but pulsing through space with rhythm, rebellion, and raw power."
     );
 
+    // Card2
+    $("#card2 img")
+      .first()
+      .attr(
+        "src",
+        "https://images.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+      );
+    //h3
+    $("#card2 h3").text("Polly-Hendrix");
+    //paragragh
+    $("#card2 p").text(
+      "Half alien, half sheep, fully electric — Polly-Hendrix is a solo artist who blends woolly innocence with cosmic energy. Expect bleats, beats, and interstellar soul in every track."
+    );
     //Card3
-    $("#card3 img").first().attr("src", 
-      "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+    $("#card3 img")
+      .first()
+      .attr(
+        "src",
+        "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+      );
+    //h3
+    $("#card3 h3").text("Dead-Nan's Tent");
+    //paragragh
+    $("#card3 p").text(
+      "A nomadic act wrapped in velvet curtains and static dreams, Dead-Nan’s Tent channels lo-fi lullabies, forgotten radio signals, and stories only the stars remember. "
     );
   });
 }
