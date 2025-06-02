@@ -241,3 +241,14 @@
     box-shadow: #215016 0px 0px 10px;
     margin-top: 200px;
 }
+
+/* Media queries */
+
+@media screen and (min-width: 922px) {
+    
+/* Artist profiles */
+.carousel-container {
+    min-width: 800px;
+}
+
+}
