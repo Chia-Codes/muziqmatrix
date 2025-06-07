@@ -24,7 +24,7 @@
     body {
     font-family: var(--primary-font);
     color: var(--primary-color);
-    background-color: var(--secondary-color);
+    background: radial-gradient(circle at center, #0f2a28, #021117);
     text-shadow: #4bec2a 0px 0px 10px;
     
     /* Center content */
@@ -33,20 +33,31 @@
     align-items: center;
 }
 
-    footer {
-    /* Ensure footer is behind the canvas */
-    position: relative;
-    z-index: 1;
-}   
+/* Create background grid effect */
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(rgba(14, 233, 32, 0.1) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+	background-size: 40px 40px;
+	background-position: center center;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	animation: gridMove 60s linear infinite;
+  z-index: -999;
+}
 
 /* Navbar */
     .navbar {
     width: 100%;
-    background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 15px;
     font-family: var(--secondary-font); 
-    background: linear-gradient(135deg, #0f0f0f, #2b2828); 
+    background: radial-gradient(circle at center, #0f2a28, #021117);
     box-shadow: #215016 0px 0px 10px;
 
     /* Display items at either end of the navbar */
@@ -133,7 +144,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 /* Artist Profiles */
 .carousel-container {
@@ -240,6 +250,20 @@
   height: 2rem;
 }
 
+
+/* Footer */
+    #footer {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--secondary-font);
+    box-shadow: #215016 0px 0px 10px;
+    margin-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
 /* Style made for js use to make them easier to find */
 /*hidden class to hide games when not in use */
 .hidden {
@@ -255,16 +279,9 @@
   z-index: 9999;
 }
 
-/* Footer */
-    #footer {
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    text-align: center;
-    font-family: var(--secondary-font);
-    box-shadow: #215016 0px 0px 10px;
-    margin-top: 200px;
-}
+	
+
+
 
 /* Media queries */
 
