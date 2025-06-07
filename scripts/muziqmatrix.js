@@ -15,6 +15,7 @@ const enterBtn = () => {
   ["landing-page", "canvas"].forEach(
     (id) => (document.getElementById(id).style.display = "none")
   );
+  $(".navbar").removeClass("hidden");
 };
 
 // Enter button function

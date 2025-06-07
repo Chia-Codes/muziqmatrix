@@ -37,13 +37,14 @@ beforeEach(() => {
   updateCarousel();
 });
 
-// Tests for landing page
+// Tests for landing page - Enter Button
 describe("Landing page tests", () => {
   test("removes landing page click enter button", () => {
     const btn = document.getElementById("enter-btn");
     btn.click();
     expect(document.getElementById("landing-page").style.display).toBe("none");
     expect(document.getElementById("canvas").style.display).toBe("none");
+    expect($("#nav").hasClass("hidden")).toBe(false)
   });
 });
 

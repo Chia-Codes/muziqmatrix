@@ -254,7 +254,7 @@ body::before {
 /* Footer */
     #footer {
     width: 100%;
-    background-color: var(--secondary-color);
+    background: radial-gradient(circle at center, #0f2a28, #021117);
     color: var(--primary-color);
     text-align: center;
     font-family: var(--secondary-font);
