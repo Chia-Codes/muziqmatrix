@@ -65,7 +65,6 @@ function rockBtn() {
     );
     //Award tags
     $("#card2-tag1").text("Solo Fleet Awards");
-    $("#card2-tag2").addClass("hidden");
     $("#card2-tag3").addClass("hidden");
 
     //Card3
@@ -84,7 +83,6 @@ function rockBtn() {
     //Award tags
     $("#card3-tag1").text("Universal Legacy Awards 8879");
     $("#card3-tag2").addClass("hidden");
-    $("#card3-tag3").addClass("hidden");
   });
 }
 

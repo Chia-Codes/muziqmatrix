@@ -144,6 +144,7 @@
   background-color: #0000;
   box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
+  padding: 2rem;
 }
 
 .carousel-card {
@@ -169,6 +170,7 @@
     width: 300px;
     height: 150px;
     font-family: var(--secondary-font);
+    padding: 10px;
     
   /* Align card content */
   display: flex;
@@ -266,7 +268,40 @@
     
 /* Artist profiles */
 .carousel-container {
-    min-width: 800px;
+    max-width: 800px;
 }
 
 }
+
+@media only screen and (max-width: 768px) {
+  .carousel-container {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-track {
+    flex: 1; 
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+  .carousel-indicators,
+  .carousel-button {
+    z-index: 10;
+  }
+
+  .carousel-indicators {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 80px;
+  }
+
+}
+
