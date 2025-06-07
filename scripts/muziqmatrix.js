@@ -256,6 +256,7 @@ function artistNavbar() {
         $("#artist-profiles").addClass("hidden");
         $("#home").removeClass("hidden");
         $(".games-btn").text("Games");
+        gamesBtn();
       });
   }
 }
