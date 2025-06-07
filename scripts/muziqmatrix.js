@@ -270,11 +270,13 @@ const $track = $(".carousel-track");
   let currentIndex = 0;
 
   function updateCarousel() {
-    const $cards = $(".carousel-card");
-    const slideWidth = $cards.eq(0).outerWidth(true);
-    $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
-    $indicators.removeClass("active").eq(currentIndex).addClass("active");
-    console.log("transform value:", $track.css("transform"));
+    const $track = $(".carousel-track");
+  const $cards = $(".carousel-card");
+  const slideWidth = $cards.eq(0).outerWidth(true); // Width including margin
+
+  $track[0].style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+  $indicators.removeClass("active").eq(currentIndex).addClass("active");
   }
 
   $(".carousel-button.next").on("click", function () {
