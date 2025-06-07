@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
   hiphopBtn();
   classicalBtn();
   artistNavbar();
-  updateCarousel();
 });
 
 // Function to hide landing page when enter button is clicked
@@ -270,13 +269,11 @@ const $track = $(".carousel-track");
   let currentIndex = 0;
 
   function updateCarousel() {
-    const $track = $(".carousel-track");
-  const $cards = $(".carousel-card");
-  const slideWidth = $cards.eq(0).outerWidth(true); // Width including margin
-
-  $track[0].style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-
-  $indicators.removeClass("active").eq(currentIndex).addClass("active");
+    const $cards = $(".carousel-card");
+    const slideWidth = $cards.eq(0).outerWidth(true);
+    $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
+    $indicators.removeClass("active").eq(currentIndex).addClass("active");
+    console.log("transform value:", $track.css("transform"));
   }
 
   $(".carousel-button.next").on("click", function () {
