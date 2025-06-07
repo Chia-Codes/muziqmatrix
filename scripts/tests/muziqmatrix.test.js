@@ -20,6 +20,7 @@ const {
   classicalBtn,
   hiphopBtn,
   artistNavbar,
+  updateCarousel,
 } = require("../muziqmatrix");
 
 //Runs before each test is run
@@ -33,6 +34,7 @@ beforeEach(() => {
   showScore();
   resetQuiz();
   artistNavbar();
+  updateCarousel();
 });
 
 // Tests for landing page
@@ -116,6 +118,7 @@ describe("Tests for genre buttons", () => {
     expect($("#card1 h3").text()).toBe(
       "Rocky Runs Legacy");
   });
+
   //Card 2
   //img
   test ("Rock button artist profile card2 updates", () => {
@@ -139,7 +142,7 @@ describe("Tests for genre buttons", () => {
     );
   })
 
-
+// Genre Buttons
   test("Jazz button displays artist profiles on click", () => {
     jazzBtn();
     $("#jazz-btn").trigger("click");
@@ -158,6 +161,21 @@ describe("Tests for genre buttons", () => {
     expect($("#home").hasClass("hidden")).toBe(true);
     expect($("#artist-profiles").hasClass("hidden")).toBe(false);
   });
+});
+
+//Artist Profile Carousel
+describe("carousel track test", () => {
+  test("carousel has no transform when currentIndex is 0", () => {
+  let $track = $(".carousel-track");
+  let $indicators = $(".indicator");
+
+  $.fn.outerWidth = jest.fn(() => 110);
+  currentIndex = 0;
+  updateCarousel();
+  //Expected empty on page load until click
+  expect($track.css("transform")).toBe("");
+  expect($indicators.eq(0).hasClass("active")).toBe(true);
+});
 });
 
 //Music Quiz

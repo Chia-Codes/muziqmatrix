@@ -1,6 +1,5 @@
 // Load actions to run after DOM is loaded
 window.addEventListener("DOMContentLoaded", () => {
-  enterBtnClick();
   gamesBtn();
   loadQuestion();
   resetQuiz();
@@ -9,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   hiphopBtn();
   classicalBtn();
   artistNavbar();
+  updateCarousel();
 });
 
 // Function to hide landing page when enter button is clicked
@@ -247,6 +247,7 @@ function hiphopBtn() {
 }
 
 //Artist profiles
+// Create close button when profiles displayed
 function artistNavbar() {
   if (!$("#artist-profiles").hasClass("hidden")) {
     $(".games-btn")
@@ -256,10 +257,38 @@ function artistNavbar() {
         $("#artist-profiles").addClass("hidden");
         $("#home").removeClass("hidden");
         $(".games-btn").text("Games");
+        // To ensure the quiz game is available after clicking on artist profiles
         gamesBtn();
       });
   }
 }
+
+// Create infinite scroll with carousel indicators
+const $track = $(".carousel-track");
+  const $cards = $(".carousel-card");
+  const $indicators = $(".indicator");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const $cards = $(".carousel-card");
+    const slideWidth = $cards.eq(0).outerWidth(true);
+    $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
+    $indicators.removeClass("active").eq(currentIndex).addClass("active");
+    console.log("transform value:", $track.css("transform"));
+  }
+
+  $(".carousel-button.next").on("click", function () {
+    //Go to the next card
+    currentIndex = (currentIndex + 1) % $cards.length;
+    updateCarousel();
+  });
+
+  $(".carousel-button.prev").on("click", function () {
+    //Go to the previous card
+    currentIndex = (currentIndex - 1 + $cards.length) % $cards.length;
+    updateCarousel();
+  });
+
 
 //Music Quiz
 //Show quiz container when games button is clicked
@@ -412,5 +441,6 @@ if (typeof module !== "undefined" && module.exports) {
     hiphopBtn,
     classicalBtn,
     artistNavbar,
+    updateCarousel,
   };
 }
