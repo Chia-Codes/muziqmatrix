@@ -91,17 +91,17 @@ describe("Games button tests", () => {
 
 //Artist profiles
 describe("Tests for genre buttons", () => {
-    //Rock button
+  //Rock button
   test("Rock button displays artist profiles on click", () => {
     rockBtn();
     $("#rock-btn").trigger("click");
     expect($("#home").hasClass("hidden")).toBe(true);
-    expect($("#artist-profiles").hasClass("hidden")).toBe(false); 
+    expect($("#artist-profiles").hasClass("hidden")).toBe(false);
   });
-  
+
   //Card 1
   //img
-  test ("Rock button artist profile card1 updates img", () => {
+  test("Rock button artist profile card1 updates img", () => {
     $("#card1 img").attr(
       "src",
       "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
@@ -109,19 +109,16 @@ describe("Tests for genre buttons", () => {
     expect($("#card1 img").attr("src")).toBe(
       "https://images.nightcafe.studio/jobs/rbgPZd8hJDe9XBrTLDZk/rbgPZd8hJDe9XBrTLDZk--1--5f9yn.jpg?tr=w-1600,c-at_max"
     );
-  })
+  });
   //Text content
-  test ("Rock button artist profile card1 updates text", () => {
-    $("#card1 h3").text(
-      "Rocky Runs Legacy"
-    );
-    expect($("#card1 h3").text()).toBe(
-      "Rocky Runs Legacy");
+  test("Rock button artist profile card1 updates text", () => {
+    $("#card1 h3").text("Rocky Runs Legacy");
+    expect($("#card1 h3").text()).toBe("Rocky Runs Legacy");
   });
 
   //Card 2
   //img
-  test ("Rock button artist profile card2 updates", () => {
+  test("Rock button artist profile card2 updates", () => {
     $("#card2 img").attr(
       "src",
       "https://creator.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
@@ -129,10 +126,10 @@ describe("Tests for genre buttons", () => {
     expect($("#card2 img").attr("src")).toBe(
       "https://creator.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
     );
-  })
+  });
   //Card 3
   //img
-  test ("Rock button artist profile card3 updates", () => {
+  test("Rock button artist profile card3 updates", () => {
     $("#card3 img").attr(
       "src",
       "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
@@ -140,9 +137,9 @@ describe("Tests for genre buttons", () => {
     expect($("#card3 img").attr("src")).toBe(
       "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
     );
-  })
+  });
 
-// Genre Buttons
+  // Genre Buttons
   test("Jazz button displays artist profiles on click", () => {
     jazzBtn();
     $("#jazz-btn").trigger("click");
@@ -166,16 +163,32 @@ describe("Tests for genre buttons", () => {
 //Artist Profile Carousel
 describe("carousel track test", () => {
   test("carousel has no transform when currentIndex is 0", () => {
-  let $track = $(".carousel-track");
-  let $indicators = $(".indicator");
+    let $track = $(".carousel-track");
+    let $indicators = $(".indicator");
 
-  $.fn.outerWidth = jest.fn(() => 110);
-  currentIndex = 0;
-  updateCarousel();
-  //Expected empty on page load until click
-  expect($track.css("transform")).toBe("");
-  expect($indicators.eq(0).hasClass("active")).toBe(true);
-});
+    $.fn.outerWidth = jest.fn(() => 110);
+    currentIndex = 0;
+    updateCarousel();
+    //Expected empty on page load until click
+    expect($track.css("transform")).toBe("");
+    expect($indicators.eq(0).hasClass("active")).toBe(true);
+  });
+  test("clicking carousel card displays requestFullscreen", () => {
+    const $card = $(".carousel-card").eq(0);
+    // Clone requestFullscreen for test
+    $card[0].requestFullscreen = jest.fn();
+    $(".carousel-card").on("click", function () {
+      if (this.requestFullscreen) {
+        this.requestFullscreen();
+      } else if (this.webkitRequestFullscreen) {
+        this.webkitRequestFullscreen();
+      } else if (this.msRequestFullscreen) {
+        this.msRequestFullscreen();
+      }
+    });
+    $card.trigger("click");
+    expect($card[0].requestFullscreen).toHaveBeenCalled();
+  });
 });
 
 //Music Quiz

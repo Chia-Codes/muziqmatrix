@@ -134,11 +134,6 @@
     justify-content: center;
 }
 
-/* Games */
-/*hidden class to hide games when not in use */
-.hidden {
-  display: none;
-}
 
 /* Artist Profiles */
 .carousel-container {
@@ -237,6 +232,21 @@
 .carousel-button svg {
   width: 2rem;
   height: 2rem;
+}
+
+/* Style made for js use to make them easier to find */
+/*hidden class to hide games when not in use */
+.hidden {
+  display: none;
+}
+
+:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 9999;
 }
 
 /* Footer */

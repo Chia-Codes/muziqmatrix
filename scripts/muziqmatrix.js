@@ -288,6 +288,17 @@ const $track = $(".carousel-track");
     updateCarousel();
   });
 
+  //Webkit API requesting full screen on carousel cards
+  $(".carousel-card").on("click", function () {
+  if (this.requestFullscreen) {
+    this.requestFullscreen();
+  } else if (this.webkitRequestFullscreen) {
+    this.webkitRequestFullscreen();
+  } else if (this.msRequestFullscreen) {
+    this.msRequestFullscreen();
+  }
+});
+
 
 //Music Quiz
 //Show quiz container when games button is clicked
