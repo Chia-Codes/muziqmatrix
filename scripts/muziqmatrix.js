@@ -25,7 +25,7 @@ const enterBtnClick = () =>
 // Call function for event listener
 enterBtnClick();
 
-// Bootstrap custom modal 
+// Bootstrap custom modal
 
 function helpNavModal() {
   const $helpLink = $("#help-link");
@@ -44,7 +44,7 @@ function rockBtn() {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
-    
+
     // Card1
     //img
     $("#card1 img")
@@ -276,32 +276,32 @@ function artistNavbar() {
 
 // Create infinite scroll with carousel indicators
 const $track = $(".carousel-track");
+const $cards = $(".carousel-card");
+const $indicators = $(".indicator");
+let currentIndex = 0;
+
+function updateCarousel() {
   const $cards = $(".carousel-card");
-  const $indicators = $(".indicator");
-  let currentIndex = 0;
+  const slideWidth = $cards.eq(0).outerWidth(true);
+  $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
+  $indicators.removeClass("active").eq(currentIndex).addClass("active");
+  console.log("transform value:", $track.css("transform"));
+}
 
-  function updateCarousel() {
-    const $cards = $(".carousel-card");
-    const slideWidth = $cards.eq(0).outerWidth(true);
-    $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
-    $indicators.removeClass("active").eq(currentIndex).addClass("active");
-    console.log("transform value:", $track.css("transform"));
-  }
+$(".carousel-button.next").on("click", function () {
+  //Go to the next card
+  currentIndex = (currentIndex + 1) % $cards.length;
+  updateCarousel();
+});
 
-  $(".carousel-button.next").on("click", function () {
-    //Go to the next card
-    currentIndex = (currentIndex + 1) % $cards.length;
-    updateCarousel();
-  });
+$(".carousel-button.prev").on("click", function () {
+  //Go to the previous card
+  currentIndex = (currentIndex - 1 + $cards.length) % $cards.length;
+  updateCarousel();
+});
 
-  $(".carousel-button.prev").on("click", function () {
-    //Go to the previous card
-    currentIndex = (currentIndex - 1 + $cards.length) % $cards.length;
-    updateCarousel();
-  });
-
-  //Webkit API requesting full screen on carousel cards
-  $(".carousel-card").on("click", function () {
+//Webkit API requesting full screen on carousel cards
+$(".carousel-card").on("click", function () {
   if (this.requestFullscreen) {
     this.requestFullscreen();
   } else if (this.webkitRequestFullscreen) {
@@ -310,7 +310,6 @@ const $track = $(".carousel-track");
     this.msRequestFullscreen();
   }
 });
-
 
 //Music Quiz
 //Show quiz container when games button is clicked
