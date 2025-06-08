@@ -62,7 +62,7 @@ describe("Navbar helplink test", () => {
     helpNavModal();
     $("#help-link").trigger("click");
 
-    expect(bootstrap.Modal).toHaveBeenCalledWith(document.getElementById("helpModal"));
+    expect(bootstrap.Modal).toHaveBeenCalledWith(document.getElementById("help-modal"));
 
     const modalInstance = bootstrap.Modal.mock.results[0].value;
     expect(modalInstance.show).toHaveBeenCalled();

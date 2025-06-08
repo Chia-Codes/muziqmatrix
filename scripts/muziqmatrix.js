@@ -32,7 +32,7 @@ function helpNavModal() {
   // Show modal on click
   $helpLink.on("click", function (e) {
     e.preventDefault();
-    const modal = new bootstrap.Modal(document.getElementById("helpModal"));
+    const modal = new bootstrap.Modal(document.getElementById("help-modal"));
     modal.show();
   });
 }

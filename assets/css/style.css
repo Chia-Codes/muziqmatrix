@@ -69,11 +69,15 @@ body::before {
     z-index: 1;
 }
 
+.modal-content {
+  background: linear-gradient(#22514d, #021117);
+}
+
   #help-link {
     color: var(--primary-color);
     cursor: pointer;
     transition: text-decoration 0.2s ease;
-  }
+}
 
     .games-btn {
     color: var(--secondary-color);
