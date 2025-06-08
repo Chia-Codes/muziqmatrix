@@ -27,10 +27,12 @@
     background: radial-gradient(circle at center, #0f2a28, #021117);
     text-shadow: #4bec2a 0px 0px 10px;
     
-    /* Center content */
+    
+    /* Center content and help push foot to page bottom */
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
 /* Create background grid effect */
@@ -272,6 +274,8 @@ body::before {
     box-shadow: #215016 0px 0px 10px;
     position: relative;
     z-index: 1;
+    /* Push footer to bottom of page */
+    margin-top: auto;
 }
 
 /* Style made for js use to make them easier to find */
