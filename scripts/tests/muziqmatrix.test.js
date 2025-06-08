@@ -5,6 +5,13 @@
 const $ = require("jquery");
 global.$ = $;
 
+//Mock bootsrap modal for testing 
+global.bootstrap = {
+  Modal: jest.fn().mockImplementation(() => ({
+    show: jest.fn(),
+  })),
+};
+
 //Import functions to test
 const {
   enterBtnClick,
@@ -21,6 +28,7 @@ const {
   hiphopBtn,
   artistNavbar,
   updateCarousel,
+  helpNavModal,
 } = require("../muziqmatrix");
 
 //Runs before each test is run
@@ -45,6 +53,19 @@ describe("Landing page tests", () => {
     expect(document.getElementById("landing-page").style.display).toBe("none");
     expect(document.getElementById("canvas").style.display).toBe("none");
     expect($("#nav").hasClass("hidden")).toBe(false)
+  });
+});
+
+//Navbar - Help link - Bootstrap Modal
+describe("Navbar helplink test", () => {
+  test("Opens custom modal with button", () => {
+    helpNavModal();
+    $("#help-link").trigger("click");
+
+    expect(bootstrap.Modal).toHaveBeenCalledWith(document.getElementById("helpModal"));
+
+    const modalInstance = bootstrap.Modal.mock.results[0].value;
+    expect(modalInstance.show).toHaveBeenCalled();
   });
 });
 

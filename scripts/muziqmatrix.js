@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   hiphopBtn();
   classicalBtn();
   artistNavbar();
+  helpNavModal();
 });
 
 // Function to hide landing page when enter button is clicked
@@ -23,6 +24,18 @@ const enterBtnClick = () =>
   document.getElementById("enter-btn")?.addEventListener("click", enterBtn);
 // Call function for event listener
 enterBtnClick();
+
+// Bootstrap custom modal 
+
+function helpNavModal() {
+  const $helpLink = $("#help-link");
+  // Show modal on click
+  $helpLink.on("click", function (e) {
+    e.preventDefault();
+    const modal = new bootstrap.Modal(document.getElementById("helpModal"));
+    modal.show();
+  });
+}
 
 //Genre button functions
 //Rock button
@@ -451,5 +464,6 @@ if (typeof module !== "undefined" && module.exports) {
     classicalBtn,
     artistNavbar,
     updateCarousel,
+    helpNavModal,
   };
 }

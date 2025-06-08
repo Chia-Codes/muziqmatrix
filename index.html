@@ -24,7 +24,7 @@
     
     <!-- Navbar-->
     <nav id="nav" class="navbar container-fluid hidden">
-        <a href="" class="nav-link">Help?</a>
+        <a href="#" id="help-link" class="help-link">Help?</a>
         <button class="games-btn" type="submit">Games</button>
     </nav>
 
@@ -41,7 +41,23 @@
         </div>
     </section>
     
-    <!--Enter Button-->
+    <!-- Bootstrap custom modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">Are you lost?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <p>It's okay! Tune into the future by clicking upgrade</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Upgrade Now!</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <!--Main Content-->
     <main>

@@ -69,6 +69,12 @@ body::before {
     z-index: 1;
 }
 
+  #help-link {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: text-decoration 0.2s ease;
+  }
+
     .games-btn {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
