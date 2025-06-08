@@ -70,10 +70,10 @@
 
             <!--Genre Buttons-->
                 <div class="genre-btns">
-                    <button id="rock-btn" class="genre col-12 col-md-6" type="button">Rock</button>
-                    <button id="jazz-btn" class="genre col-12 col-md-6">Jazz</button>
-                    <button id="classical-btn" class="genre col-12 col-md-6">Classical</button>
-                    <button id="hiphop-btn" class="genre col-12 col-md-6">Hip-Hop</button>
+                    <button id="rock-btn" class="genre col-12 col-md-6" type="button" title="genre">Rock</button>
+                    <button id="jazz-btn" class="genre col-12 col-md-6" type="button" title="genre">Jazz</button>
+                    <button id="classical-btn" class="genre col-12 col-md-6" type="button" title="genre">Classical</button>
+                    <button id="hiphop-btn" class="genre col-12 col-md-6" type="button" title="genre">Hip-Hop</button>
                 </div>
                 </div>
         </section>
@@ -130,12 +130,12 @@
 		</div>
 	</div>
 
-	<button class="carousel-button prev">
+	<button class="carousel-button prev" type="submit" title="carousel-prev">
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 			<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 		</svg>
 	</button>
-	<button class="carousel-button next">
+	<button class="carousel-button next" type="submit" title="carousel-next">
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 			<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 		</svg>
@@ -156,14 +156,14 @@
             <h2 id="quiz-question">Ready for a music challenge?</h2>
                 <!--Quiz questions-->
                 <div id="quiz-options" class="mt-5">
-                    <button class="quiz-option" id="option1"></button>
-                    <button class="quiz-option" id="option2"></button>
-                    <button class="quiz-option" id="option3"></button>
-                    <button class="quiz-option" id="option4"></button>
+                    <button class="quiz-option" id="option1" type="button" title="option"></button>
+                    <button class="quiz-option" id="option2" type="button" title="option"></button>
+                    <button class="quiz-option" id="option3" type="button" title="option"></button>
+                    <button class="quiz-option" id="option4" type="button" title="option"></button>
                 </div>
-                <button id="restart-btn" class="btn btn-secondary mt-5">Restart Quiz</button>
+                <button id="restart-btn" class="btn btn-secondary mt-5" type="button" title="restart">Restart Quiz</button>
             <!--Exit quiz button-->
-            <button id="exit-quiz-btn" class="btn btn-secondary mt-5">Exit</button>
+            <button id="exit-quiz-btn" class="btn btn-secondary mt-5" type="button" title="exit">Exit</button>
         </div>
     </section>
     
@@ -171,7 +171,7 @@
     <p id="quiz-progress" class="hidden">Question 0 of 0</p>
     <div id="quiz-score" class="hidden mt-5">
         <p id="score-message"></p>
-        <button id="return-home-btn">Return Home</button>
+        <button id="return-home-btn" type="button" title="return-home">Return Home</button>
     </div>
 
     <!--Footer -->
