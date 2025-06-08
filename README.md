@@ -182,7 +182,7 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
   - This feature can be used to update the appreance of the site, performing a irreviersible change. For the user this creates and sense of control and excitement engaging with the site this way. 
 
       ![Modal](docs/readme_images/modal.webp)
-      
+
 
 ### Features left to Implement.
 
@@ -262,6 +262,59 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
   - Webkit is used for allowing users acces to fullscreen mode. 
 
 ## Testing <---------------------------------------------------------------------------------------------------->
+
+Chrome DevTools was used throughout development and testing the deployed website to check for accessibility issues.
+
+Testing was focused on the following criteria:
+
+### Responsiveness
+
+
+  
+## Lighthouse Testing Before Fixes
+
+#### Landing Page
+
+#### Home Page
+
+#### Artist Profile Carousel
+
+#### Music Quiz
+
+
+# Lighthouse Testing After Fixes
+
+#### Landing Page
+
+#### Home Page
+
+#### Artist Profile Carousel
+
+#### Music Quiz
+
+
+### Functional Testing
+
+**Navigation Links**
+
+
+
+Links on all pages navigated to the correct pages and section as expected.
+
+
+
+
+### Validator Testing 
+
+- HTML
+
+- CSS
+
+- JavaScript
+
+### Unfixed Bugs
+
+
 
 #### Testing
 
