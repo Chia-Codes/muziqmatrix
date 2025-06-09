@@ -110,6 +110,7 @@ body::before {
 /* Landing page */
     #landing-page {
     font-family: var(--secondary-font);
+    background: #000;
 
     /* Center the landing page content */
     display: flex;
@@ -135,6 +136,8 @@ body::before {
     padding: 15px 20px;
     font-size: 1.5rem;
     border-radius: 45px;
+    /* Ensure background color on page load*/
+    background: #000;
 }
 
 /* Main Content */
