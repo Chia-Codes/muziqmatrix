@@ -268,7 +268,6 @@ Chrome DevTools was used throughout development and testing the deployed website
 Testing was focused on the following criteria:
 
 ### Responsiveness
-
   
 ## Lighthouse Testing Before Fixes
 
