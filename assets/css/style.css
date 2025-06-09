@@ -172,7 +172,6 @@ body::before {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  max-width: 400px;
   margin: 4rem auto;
   background-color: #0000;
   box-shadow: 0 0 15px var(--primary-color);
@@ -314,11 +313,18 @@ footer {
 
 /* Media queries */
 
+@media screen and (max-width: 320px){
+  #artist-profiles {
+    width: 323px;
+    height: 800px;
+  }
+}
+
 @media screen and (min-width: 922px) {
     
 /* Artist profiles */
 .carousel-container {
-    max-width: 800px;
+    max-width: 100vw;
 }
 
 }
