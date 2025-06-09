@@ -143,11 +143,11 @@ body::before {
 /* Main Content */
 
 #intro {
-  background-color: #000;
+  background-color: radial-gradient(circle at center, #0f2a28, #021117);
 }
 
 #intro-text {
-  background-color: #000;
+  background-color: radial-gradient(circle at center, #0f2a28, #021117);
 }
 
 /* Genre Buttons */

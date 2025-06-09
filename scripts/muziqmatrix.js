@@ -351,9 +351,12 @@ $("#quiz-options").on("click", ".option-btn", (e) => {
   //score++ will only run if correct answer is selected
   selected === correct && score++;
   // loadQuestion is called unless its the last one
-  currentQuestion < quizData.length - 1
-    ? (currentQuestion++, loadQuestion())
-    : showScore(score, quizData.length);
+  if (currentQuestion < quizData.length - 1) {
+  currentQuestion++;
+  loadQuestion();
+} else {
+  showScore(score, quizData.length);
+}
 });
 
 // Show score function
