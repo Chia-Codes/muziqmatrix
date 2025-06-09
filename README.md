@@ -269,7 +269,6 @@ Testing was focused on the following criteria:
 
 ### Responsiveness
 
-
   
 ## Lighthouse Testing Before Fixes
 
