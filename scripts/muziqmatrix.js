@@ -1,3 +1,7 @@
+/* jshint esversion: 6 */
+
+/* globals $, bootstrap, module  */
+
 // Load actions to run after DOM is loaded
 window.addEventListener("DOMContentLoaded", () => {
   gamesBtn();
