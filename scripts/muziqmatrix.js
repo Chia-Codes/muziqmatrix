@@ -349,7 +349,9 @@ $("#quiz-options").on("click", ".option-btn", (e) => {
   const selected = $(e.target).text();
   const correct = quizData[currentQuestion].answer[0];
   //score++ will only run if correct answer is selected
-  selected === correct && score++;
+    if (selected === correct) {
+      score++;
+    }
   // loadQuestion is called unless its the last one
   if (currentQuestion < quizData.length - 1) {
   currentQuestion++;
@@ -453,19 +455,19 @@ if (typeof module !== "undefined" && module.exports) {
     enterBtnClick,
     gamesBtn,
     loadQuestion,
-    quizData,
-    currentQuestion,
-    showScore,
-    getScore: () => score,
     getCurrentQuestion: () => currentQuestion,
+    currentQuestion,
+    quizData,
+    getScore: () => score,
+    showScore,
     resetQuiz,
     startQuiz,
-    rockBtn,
-    jazzBtn,
+    artistNavbar,
     hiphopBtn,
     classicalBtn,
-    artistNavbar,
-    updateCarousel,
+    jazzBtn,
+    rockBtn,
     helpNavModal,
+    updateCarousel,
   };
 }
