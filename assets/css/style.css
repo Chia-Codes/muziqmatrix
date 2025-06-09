@@ -142,6 +142,14 @@ body::before {
 
 /* Main Content */
 
+#intro {
+  background-color: #000;
+}
+
+#intro-text {
+  background-color: #000;
+}
+
 /* Genre Buttons */
     .genre {
     color: var(--secondary-color);
@@ -279,6 +287,10 @@ body::before {
     z-index: 1;
     /* Push footer to bottom of page */
     margin-top: auto;
+}
+
+footer {
+  background-color: #000;
 }
 
 /* Style made for js use to make them easier to find */
