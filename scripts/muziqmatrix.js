@@ -21,7 +21,7 @@ const enterBtn = () => {
 
 // Enter button function
 const enterBtnClick = () =>
-  document.getElementById("enter-btn")?.addEventListener("click", enterBtn);
+  document.getElementById("enter-btn").addEventListener("click", enterBtn);
 // Call function for event listener
 enterBtnClick();
 
