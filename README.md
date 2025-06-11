@@ -25,11 +25,11 @@
 
 ### Artist profile carousel screenshot
 
-![Artist Profile](docs/readme_images/responsive/responsive-artist-profile-carousel.webp)
+![Artist Profile](docs/readme_images/responsive/reseponsive-artist-profile-carousel.webp)
 
 ### Music Quiz screenshot
 
-![Music Quiz](docs/readme_images/reseponsive/responsive-music-quiz.webp)
+![Music Quiz](docs/readme_images/reseponsive/reseponsive-music-quiz.webp)
 
 
 - All screenshots created using [Am I responsive](http://ami.responsivedesign.is/)
@@ -71,7 +71,7 @@
     - [Tablet](docs/wireframes/artist-profile-tablet-wireframe.pdf)
     - [Mobile](docs/wireframes/artist-profile-mobile-wireframe.pdf)
   - Music Quiz
-    - [Desktop](docs/wireframes/music-quiz-wireframe.pdf)
+    - [Desktop](docs/wireframes/music-quiz-desktop-wireframe.pdf)
     - [Tablet](docs/wireframes/music-quiz-tablet-wireframe.pdf)
     - [Mobile](docs/wireframes/music-quiz-mobile-wireframe.pdf)
 
@@ -110,7 +110,7 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
 - With the help of BroCode youtube tutorial (details in the credit section) I have created an interactive canvas, in which you must click to access site contents. 
 - This enter button feature hides after user has triggered a click only on the button. 
 
-![Landing Page](docs/readme_images/home-pg.webp)
+![Landing Page](docs/readme_images/landing-pg.webp)
 
 #### Home Page
 
@@ -127,14 +127,14 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
       - Successfully triggering the games button will hide the home page and display a music quiz.
       - This is an interative trivia game ensures users can easily and accessibly close music quiz if opened. 
 
-      ![Games Button](docs/readme_images/games-btn.webp)
+      ![Games Button](docs/readme_images/games-btn.webp) -----------------------------
 
     - Navbar Link (Help)
 
       - As a gimmicky fun element, the navbar link help is triggered with a bootstrap modal implementing 'cause and effect' with user interactivity.  
       - The modal is displays a message in reference to the matrix movies and allows an Event listener to be stimulated.
 
-      ![Navabr Link](docs/readme_images/help-link-help.webp) 
+      ![Navabr Link](docs/readme_images/nav-link-help.webp) ---------------------------------------
 
 #### Music Quiz
 
@@ -151,7 +151,7 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
 
       ![Restart Button](docs/readme_images/restart-quiz-btn.webp)
 
-      ![Exit Button](docs/readme_images/exit-btn.webp)
+      ![Exit Button](docs/readme_images/exit-quiz-btn.webp)
 
     - Quiz Result
 
@@ -567,7 +567,7 @@ Restart button for quiz questions behaved as expected.
 
 ```expect(currentArtistIndex).toBe(1);```
 
-  - Clicking the left indicator buttons shows the prev carousel card
+    - Clicking the left indicator buttons shows the prev carousel card
 
 ```$("#carousel-left").trigger("click");```
 
@@ -598,28 +598,26 @@ Carousel indicators behaved as expected.
  
 - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
 
-![HTML Validator](docs/readme_images/html-validator-test.webp)
+![HTML Validator](docs/readme_images/html-validator-test)
 
 #### CSS
 
 - No errors were returned when passing through the official [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/validator)
 
-![CSS Validator](docs/readme_images/css-validator-test.webp)
+![CSS Validator](docs/readme_images/css-validator-test)
 
 ### JavaScript
 - Multiple errors returned passing through offical [JShint checker](https://jshint.com/) 
 
 **Errors**
 
-| #| Line | Column | Source | Message |
-| 1| 42 | ("enter-btn")?**.**addEventListener| Unexpected token |
-| 2| 37|   | bootstrap | undefined |
-| 3| 352| 12 | selected === correct && score++; | Expected an assignment or function |
-| 4| 355| 25 | ? (currentQuestion++, loadQuestion()) | undefined |
-| 5| 454|   | module | undefined |
-| 6| |   | $ | undefined |
-
-- Fixed where commited via vs code and push to git. 
+| Line | Column | Source | Message |
+| 24| 42 | ("enter-btn")?**.**addEventListener| Unexpected token |
+| 37|   | bootstrap | undefined |
+| 352| 12 | selected === correct && score++; | Expected an assignment or function |
+| 355| 25 | ? (currentQuestion++, loadQuestion()) | undefined |
+| 454|   | module | undefined |
+| |   | $ | undefined |
 
 **Before Fixes**
 
@@ -629,12 +627,6 @@ Carousel indicators behaved as expected.
 - Fixes logged on commits
 
 ![JS Hint Fixed](docs/readme_images/jshint-fixed.webp)
-
-**Lighthouse Report**
-
-Lighthouse report generated showed a 93 SEO rating due to no meta descriptions. Meta descriptions were then added to the page to raise this. The lowest score on any section was 94 for performance.
-
-![Lighthouse report](docs/readme_images/lighthouse-test.webp)
 
 ### Unfixed Bugs
 
