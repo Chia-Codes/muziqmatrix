@@ -638,6 +638,10 @@ Carousel indicators behaved as expected.
 
 **Unfixed**: After site has been interacted with, clicking on genre but classical shows carousel starting with the last card.
 
+#### Issue #3: Image on Card 3 carousel 
+
+**Unfixed**: The image third carousel card sits to the left of its container and does reach the same width as the others. 
+
 ## Deployment 
 
 ### Version Control
