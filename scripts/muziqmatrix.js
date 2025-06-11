@@ -365,6 +365,13 @@ function loadQuestion() {
   const question = quizData[currentQuestion];
   $("#quiz-question").text(question.question);
   loadOptions();
+  const optionsHtml = question.options
+    .map((opt) => `<button class="option-btn genre">${opt}</button>`)
+    .join("");
+  $("#quiz-options").html(optionsHtml);
+
+  // Show current question number
+  $("#question-number").text(`Question ${currentQuestion + 1} of ${quizData.length}`);
 }
 
 // Load options for the displaed question

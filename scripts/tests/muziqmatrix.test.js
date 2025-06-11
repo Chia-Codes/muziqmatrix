@@ -249,6 +249,11 @@ describe("Music quiz tests", () => {
       `You scored ${quizData.length} out of ${quizData.length}`
     );
   });
+  test("displays current question number in format 'Question X of Y'", () => {
+  loadQuestion(); // assume currentQuestion is 0 at start
+  const questionText = $("#question-number").text();
+  expect(questionText).toBe(`Question 1 of ${quizData.length}`);
+  });
   test("returns to home page when Return Home is clicked", () => {
     $("#return-home-btn").trigger("click");
     expect($("#home").hasClass("hidden")).toBe(false);
