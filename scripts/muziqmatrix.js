@@ -25,7 +25,7 @@ const enterBtn = () => {
 
 // Enter button function
 const enterBtnClick = () =>
-  document.getElementById("enter-btn").addEventListener("click", enterBtn);
+  document.getElementById("enter-btn")?.addEventListener("click", enterBtn);
 // Call function for event listener
 enterBtnClick();
 
@@ -289,7 +289,6 @@ function updateCarousel() {
   const slideWidth = $cards.eq(0).outerWidth(true);
   $track.css("transform", `translateX(-${slideWidth * currentIndex}px)`);
   $indicators.removeClass("active").eq(currentIndex).addClass("active");
-  console.log("transform value:", $track.css("transform"));
 }
 
 $(".carousel-button.next").on("click", function () {
@@ -304,6 +303,38 @@ $(".carousel-button.prev").on("click", function () {
   updateCarousel();
 });
 
+//Close Artist profile in fullscreen
+$(".carousel-card").on("click", function () {
+  const $card = $(this);
+  const closeBtn = $card.find(".close-fullscreen");
+
+  // Request fullscreen
+  if (this.requestFullscreen) {
+    this.requestFullscreen();
+  } else if (this.webkitRequestFullscreen) {
+    this.webkitRequestFullscreen();
+  } else if (this.msRequestFullscreen) {
+    this.msRequestFullscreen();
+  }
+
+  // Show the close button
+  closeBtn.show();
+
+  // Handle close button click
+  closeBtn.on("click", function (e) {
+    // Prevent default
+    e.stopPropagation(); 
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+ closeBtn.hide();
+  });
+});
+  
 //Webkit API requesting full screen on carousel cards
 $(".carousel-card").on("click", function () {
   if (this.requestFullscreen) {
@@ -314,6 +345,7 @@ $(".carousel-card").on("click", function () {
     this.msRequestFullscreen();
   }
 });
+
 
 //Music Quiz
 //Show quiz container when games button is clicked
@@ -384,7 +416,6 @@ function resetQuiz() {
   currentQuestion = 0;
   $("#quiz-score").addClass("hidden");
   loadQuestion();
-  console.log("Quiz has been reset");
 }
 
 //Ensure button calls restarQuiz function
