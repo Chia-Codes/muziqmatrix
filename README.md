@@ -5,6 +5,7 @@
 - This project aims to build an interactive front end website using HTML CSS and javaScript.
 - I have decided to build a website tech-savy music explorers. Who'd like to discover new music artist and knowledge through triva and visual   engagement.
 - My web page consists of:
+  
   - A landing page with an enter button to grant yourself access to the site content.
   - A home page in which you can explore music artist based on genres.
   - A games button which currently holds a music triva quiz game to learn and discover. 
@@ -21,15 +22,15 @@
 
 ### Home page screenshot
 
-![Landing Page](docs/readme_images/reseponsive/responsive-home-pg.webp)
+![Landing Page](docs/readme_images/responsive/responsive-home-pg.webp)
 
 ### Artist profile carousel screenshot
 
-![Artist Profile](docs/readme_images/responsive/reseponsive-artist-profile-carousel.webp)
+![Artist Profile](docs/readme_images/responsive/responsive-artist-profile-carousel.webp)
 
 ### Music Quiz screenshot
 
-![Music Quiz](docs/readme_images/reseponsive/reseponsive-music-quiz.webp)
+![Music Quiz](docs/readme_images/responsive/responsive-music-quiz.webp)
 
 
 - All screenshots created using [Am I responsive](http://ami.responsivedesign.is/)
@@ -110,7 +111,7 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
 - With the help of BroCode youtube tutorial (details in the credit section) I have created an interactive canvas, in which you must click to access site contents. 
 - This enter button feature hides after user has triggered a click only on the button. 
 
-![Landing Page](docs/readme_images/landing-pg.webp)
+![Landing Page](docs/readme_images/muziqmatrix-landing-pg.webp)
 
 #### Home Page
 
@@ -127,14 +128,14 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
       - Successfully triggering the games button will hide the home page and display a music quiz.
       - This is an interative trivia game ensures users can easily and accessibly close music quiz if opened. 
 
-      ![Games Button](docs/readme_images/games-btn.webp) -----------------------------
+      ![Games Button](docs/readme_images/games-btn.webp)
 
     - Navbar Link (Help)
 
       - As a gimmicky fun element, the navbar link help is triggered with a bootstrap modal implementing 'cause and effect' with user interactivity.  
       - The modal is displays a message in reference to the matrix movies and allows an Event listener to be stimulated.
 
-      ![Navabr Link](docs/readme_images/nav-link-help.webp) ---------------------------------------
+      ![Navabr Link](docs/readme_images/help-link-btn.webp) 
 
 #### Music Quiz
 
@@ -151,7 +152,7 @@ This allowed me to foucus more on the structure of the code, as well as reach a 
 
       ![Restart Button](docs/readme_images/restart-quiz-btn.webp)
 
-      ![Exit Button](docs/readme_images/exit-quiz-btn.webp)
+      ![Exit Button](docs/readme_images/exit-btn.webp)
 
     - Quiz Result
 
@@ -598,13 +599,13 @@ Carousel indicators behaved as expected.
  
 - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
 
-![HTML Validator](docs/readme_images/html-validator-test)
+![HTML Validator](docs/readme_images/testing/html-validator-test.webp)
 
 #### CSS
 
 - No errors were returned when passing through the official [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/validator)
 
-![CSS Validator](docs/readme_images/css-validator-test)
+![CSS Validator](docs/readme_images/testing/css-validator-test)
 
 ### JavaScript
 - Multiple errors returned passing through offical [JShint checker](https://jshint.com/) 
@@ -621,12 +622,16 @@ Carousel indicators behaved as expected.
 
 **Before Fixes**
 
-![JS Hint Errors](docs/readme_images/jshint-errors.webp)
+![JS Hint Errors](docs/testing/jshint-errors.webp)
 
 **After Fixes**
 - Fixes logged on commits
 
-![JS Hint Fixed](docs/readme_images/jshint-fixed.webp)
+![JS Hint Fixed](docs/testing/jshint-fixed.webp)
+
+**Lighthouse**
+
+![Dev Tool Lighthouse](docs/testing/lighthosue-test.webp)
 
 ### Unfixed Bugs
 
@@ -769,3 +774,6 @@ The design follows the five planes of UX design:
 
   - All images for the website were obtained from Nightcafe.
 
+#### Coders Notes:
+
+The purpose of this project is to display and promote my javascript skills. As this is my first solo project using javascript there eveidently much more to learn, and I am keen to build of this code to improve and expand on what ive hav already created. It still needs work, but thank youf or looking through the muziqmatrix project. 
