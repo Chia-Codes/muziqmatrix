@@ -68,7 +68,7 @@
     - [Tablet](docs/wireframes/home-pg-tablet-wireframe.pdf)
     - [Mobile](docs/wireframes/home-pg-mobile-wireframe.pdf)
   - Artist Profile
-    - [Desktop](docs/wireframes/artist-profile-wireframe.pdf)
+    - [Desktop](docs/wireframes/artist-profile-desktop-wireframe.pdf)
     - [Tablet](docs/wireframes/artist-profile-tablet-wireframe.pdf)
     - [Mobile](docs/wireframes/artist-profile-mobile-wireframe.pdf)
   - Music Quiz
