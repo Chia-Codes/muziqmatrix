@@ -1,131 +1,769 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Muziqmatrix
 
-Welcome USER_NAME,
+## Milestone Project 2
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- This project aims to build an interactive front end website using HTML CSS and javaScript.
+- I have decided to build a website tech-savy music explorers. Who'd like to discover new music artist and knowledge through triva and visual   engagement.
+- My web page consists of:
+  - A landing page with an enter button to grant yourself access to the site content.
+  - A home page in which you can explore music artist based on genres.
+  - A games button which currently holds a music triva quiz game to learn and discover. 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Live project
 
-## Gitpod Reminders
+- [View the live project here.](https://chia-codes.github.io/muziqmatrix/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Screenshots
 
-`python3 -m http.server`
+### Landing page screenshot
 
-A blue button should appear to click: _Make Public_,
+![Landing Page](docs/readme_images/responsive/responsive-landing-pg.webp)
 
-Another blue button should appear to click: _Open Browser_.
+### Home page screenshot
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+![Landing Page](docs/readme_images/seponsive/responsive-home-pg.webp)
 
-A blue button should appear to click: _Make Public_,
+### Artist profile carousel screenshot
 
-Another blue button should appear to click: _Open Browser_.
+![Artist Profile](docs/readme_images/responsive/artist-profile-carousel.webp)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Music Quiz screenshot
 
-To log into the Heroku toolbelt CLI:
+![Music Quiz](docs/readme_images/reseponsive/music-quiz.webp)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- All screenshots created using [Am I responsive](http://ami.responsivedesign.is/)
 
-### Connecting your Mongo database
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+## User experience
 
-------
+### User Stories
 
-## Release History
+#### New Visitor
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - As a new user, I want to explore different artist through genres through visual engagment 
+  - As a new user, I would like to expand my music knowlegde through music trivia. 
 
-**June 18, 2024,** Add Mongo back into template
+#### Regular Users
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+  - I want to access music genres with ease with and see updated content. 
+  - As a repeat user, I enjoyed the quiz and would like to explore new quesions to keep challenging myself.
 
-**May 28 2024:** Fix Mongo and Links installs
+#### Website owner
 
-**April 26 2024:** Update node version to 16
+  - As the owner, the site to run smoothly across multiple devices for a consistent experiences.
+  - As the owner, I want easily change and update content so that it stays fresh for users.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### WireFrames
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- I've created WireFrames using Balsamiq and have included the links to access them in pdf form.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - Landing page
+    - [Desktop](docs/wireframes/landing-pg-desktop-wireframe.pdf)
+    - [Tablet](docs/wireframes/landing-pg-tablet-wireframe.pdf)
+    - [Mobile](docs/wireframes/landing-pg-mobile-wireframe.pdf)
+  - Home page
+    - [Desktop](docs/wireframes/home-pg-desktop-wireframe.pdf)
+    - [Tablet](docs/wireframes/home-pg-tablet-wireframe.pdf)
+    - [Mobile](docs/wireframes/home-pg-mobile-wireframe.pdf)
+  - Artist Profile
+    - [Desktop](docs/wireframes/artist-profile-wireframe.pdf)
+    - [Tablet](docs/wireframes/artist-profile-tablet-wireframe.pdf)
+    - [Mobile](docs/wireframes/artist-profile-mobile-wireframe.pdf)
+  - Music Quiz
+    - [Desktop](docs/wireframes/music-quiz-wireframe.pdf)
+    - [Tablet](docs/wireframes/music-quiz-tablet-wireframe.pdf)
+    - [Mobile](docs/wireframes/music-quiz-mobile-wireframe.pdf)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Design
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Colour Scheme
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Colour Code: I've created a dark futristc theme for this website using a radial-gradient(circle at center, #0f2a28, #021117) as my main background colour. My text is both jet black and neon green off white #00ff00 to contrast against the dark background.
+- Extra style: I have alternated the a glow effect (bow-shadow) on hover too to show the user what elements are clickable.
+-Style Mood: Futuristic - These colours were picked to to feel fully emersed with a site insipred by the martrix. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Typography
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Font: I've used three fonts to keep consistent with the theme. Imported from google fonts they are, Tektur and Goldman for main content and Bruce Ace for games. 
+- Fall-back: I used sans-serif as a fall-back font in the case for any reason my fonts were not imported.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Imagery
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Imagery was created by AI and imported from night cafe studio (https://creator.nightcafe.studio/)
+This allowed me to foucus more on the structure of the code, as well as reach a goal to give a creative innovative feel to the site.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### FavIcon
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- A customed favicon is used in the browser tap for site branding.
+- This will allow the user to easily identify the site in their browser.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Favicon](docs/readme_images/muziqmartrix-favicon.webp)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Features
 
-------
+### Landing Page 
 
-## FAQ about the uptime script
+#### Access Required
 
-**Why have you added this script?**
+- With the help of BroCode youtube tutorial (details in the credit section) I have created an interactive canvas, in which you must click to access site contents. 
+- This enter button feature hides after user has triggered a click only on the button. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Landing Page](docs/readme_images/landing-pg.webp)
 
-**How will this affect me?**
+#### Home Page
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+  - This is where you can access and discover all content to the site. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    - Genre Buttons
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+      - Through each interation will display different content in relation to genre button clicked.
 
-**So….?**
+      ![Genre Button](docs/readme_images/genre-btns.webp)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    - Games Button
 
-**Can I opt out?**
+      - Successfully triggering the games button will hide the home page and display a music quiz.
+      - This is an interative trivia game ensures users can easily and accessibly close music quiz if opened. 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+      ![Games Button](docs/readme_images/games-btn.webp) -----------------------------
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+    - Navbar Link (Help)
 
-**Anything more?**
+      - As a gimmicky fun element, the navbar link help is triggered with a bootstrap modal implementing 'cause and effect' with user interactivity.  
+      - The modal is displays a message in reference to the matrix movies and allows an Event listener to be stimulated.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+      ![Navabr Link](docs/readme_images/nav-link-help.webp) ---------------------------------------
 
----
+#### Music Quiz
 
-Happy coding!
+  - This feature allows the user to enage in a bit of music trivia, challenging the user. 
+  -The question and answers are dynamically loaded fom a data array.
+  - The immediate feedback system allows tracking of score and question number in real-time. Displaying the final score at the end. 
+  - Ensuring accesiibility across all devices the quiz interface is mobile friends and uses bootstrap custom classes for consistentcy and ease of use.
+  - A restart and Exit button are displayed below the quiz to help improve user friendly expereinces.
+  - Whilst the quiz is displayed the games button transition restart the quiz if it is clicked.
+      - This feature in future would display a new game at random, when more games are added. 
+     
+
+    - Restart & Exit Button
+
+      ![Restart Button](docs/readme_images/restart-quiz-btn.webp)
+
+      ![Exit Button](docs/readme_images/exit-quiz-btn.webp)
+
+    - Quiz Result
+
+      ![Quiz Results](docs/readme_images/quiz-results.webp)
+
+
+#### Artist Profiles
+
+  - Triggered by the genre buttons, the artist profiles are displayed on a carousel with resposive indicators. 
+  - Each profile card sits in a container to create background space for future adaptations. The carousel card also sit within ccontainer to give the apprence of depth in the screen to the user.
+
+    - Rock Button Artist Carousel
+
+      ![Rock Artists](docs/readme_images/rck-btn-artists.webp)
+
+    - Jazz Button Carousel
+
+      ![Jazz Artists](docs/readme_images/jzz-btn-artists.webp)
+
+    - Classical Button Carousel
+
+      ![Classical Artists](docs/readme_images/classical-btn-artists.webp)
+
+    - Hip-Hop Button Carousel
+
+      ![Hip-Hop Link](docs/readme_images/hiphop-btn-artists.webp)
+
+- #### Modal
+
+  - This feature can be used to update the appreance of the site, performing a irreviersible change. For the user this creates and sense of control and excitement engaging with the site this way. 
+
+      ![Modal](docs/readme_images/modal.webp)
+
+
+### Features left to Implement
+
+- To enhance the use of the site, more content should be added, this includes:
+    - Add artist profiles
+    - Add quiz questions 
+    - Add interactive music related games
+    - Add artist music for users experience
+- This quiz should display a message depending on the score results. 
+- A digital design of a sin wave using javascript that is manipulated by the movement of the mouse.
+    - The idea to to make the carousel look as if its floating in empty space.  
+- Error message for idle activity or wrong trigger by user.
+- Get music quiz question to be displayed in random order so the first displayed is not always the correct answer. 
+
+
+## Technologies
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+  - HTML5 was used to create the content and sturctual base of each page.
+
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+  - CSS3 was used to then style the page and make it responsive through media queries, and interactive through using CSS transitions.
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  - JavaScript was used throughout the website to make the site interactive. The JavaScript will change what is being shown to the user depending on what they click.
+
+### Frameworks Libraries and Programs
+
+- [Bootstrap v5.3](https://getbootstrap.com/)
+
+  - Bootstrap is used throughout the site, implementing buttons and a carousel to make muziqmatrix responsive.
+
+- [jQuery](https://jquery.com/)
+
+  - jQuery was used throught the Javascript file keep code clear and consice.
+
+- [Jest](https://jestjs.io/)
+
+  - Jest was used to writing and execute automated tests for the page.
+
+- [Google Fonts](https://fonts.google.com/)
+
+  - Google fonts imported for design aspect of the site. 
+
+- [Night Cafe](https://creator.nightcafe.studio/)
+
+  - Night cafe libaries used to incoporate relevant imagery for aritst profiles. 
+
+- [Squoosh](https://squoosh.app/)
+
+  - Squoosh used to compress image files to keep load time low. 
+
+- [Am I responsive](http://ami.responsivedesign.is/)
+
+  - Am I responsive was used to taking screenshots of the page at different screen sizes.
+
+- [Github](https://github.com/)
+
+  - Github was used to create and store the project progress repository.
+
+- [Gitpod](https://gitpod.io/)
+
+  - Gitpod was used to create my files and code the project.
+
+- [Balsamiq](https://balsamiq.com/)
+
+  - Balsamiq was used to create Wireframes for the project during the initial planning stage.
+
+- [VS Code](https://code.visualstudio.com/)
+
+  - Used to write store, pull and push repository through github. 
+
+### Application Programming Interface (API's)
+
+- [Webkit](https://webkit.org/)
+
+  - Webkit is used for allowing users acces to fullscreen mode. 
+
+## Testing 
+
+Chrome DevTools was used throughout development and testing the deployed website to check for accessibility issues.
+
+Testing was focused on the following criteria:
+
+- All buttons have associated types and aria-labels in accordance to WCAG guidlines to ensure accessibility of the visually impaired. 
+- All images and media content has alternative descriptive text for screen readers.
+- Making sure WCAG 2.1 recommended coding practices are being followed.
+
+### Responsiveness
+  
+  All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers.
+
+#### Manual Testing 
+
+Verifying that the carousel displays correctly across devices (e.g., mobile vs. desktop).
+
+Checking if genre buttons correctly style and reveal the artist profiles visually.
+
+Confirming that the full-screen button appears and closes the way a user would expect.
+
+Making Bootstrap modals open/close properly when navigating manually.
+
+- Manual tests were performed to ensure the website is accessible as possible and some accessibility issues were identified.
+
+#### Automated Testing
+
+Ensuring that clicking the 'Games' button hides the home page and shows the quiz.
+
+Verifying that the score resets to 0 when ```resetQuiz()``` is called.
+
+Checking that the first quiz question appears correctly from the quizData object.
+
+Testing that ```requestFullscreen()``` is triggered when a carousel card is clicked.
+
+
+Steps to test:
+
+1. Open browser and navigate to [Muziqmatrix](https://chia-codes.github.io/muziqmatrix/)
+2. Open the developer tools (right click and inspect)
+3. Set to responsive and decrease width to 320px
+4. Set the zoom to 50%
+5. Click and drag the responsive window to maximum width
+
+Expected:
+
+Website is responsive on all sizes and no images stretched.
+No horizontal scroll is present.
+No elements overlap.
+
+Actual:
+
+Website behaved as expected with the exception of not being able to go use fullscreen feature on mobiles and artist carousel does not fit to screen on mobiles which caused missed content on page first load.
+
+Website was also opened on the following devices and the same responsive issues were seen:
+
+- Samsung Galaxy S23
+- iphone 14
+- iPhone 12
+- Dell Desktop-AH44THS
+
+### Accessibility
+
+[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
+
+Testing was focused to ensure the following criteria were met:
+
+- All buttons have associated labels or aria-labels for screen reader users
+- Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
+- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
+- All not textual content had alternative text or titles so descriptions are read out to screen readers
+- HTML page lang attribute has been set
+- WCAG 2.1 Coding best practices being followed
+
+
+#### Issue #1: h1, footer element and enter button did not have a fallback color for background 
+
+**Fix**: Independantly and manually add set black background to landing page and enter button to sit visibly with neon green text.
+
+#### Issue #2: Empty alternative text for images and missing aria-labels.
+
+**Fix**: Fill in alternative text values and add aria labels. 
+
+#### Issue #3: Artist profile on mobile devices hides part of the content.
+
+**Fix**: Media query add to carousel container to ensure responsivness.
+
+#### Issue #4: Artist profile on mobile devices does not enter fullscreen after clicked.
+
+**Fix**: This is currently not fixed and a solution is currently being worked out.
+
+#### Issue #5: Close button does not display on all profile cards when entered ```fullscreen``` mode
+
+**Fix**: Add close button to html carousel cards, create ```if {} else {}``` statement to toggle and display close button in fullscreen. 
+
+
+## Site Wide
+
+### Landing Page Button
+
+Testing was performed to ensure the enter button on the landing page was hidden after click to display main content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Enter button on click  |  Hide landing page |
+
+### Navbar Links & Button
+
+Testing was performed to ensure all navigation links and buttons display to the correct content to the page as per design. This was done by clicking on the navigation links and buttons on each section.
+
+| Navigation Link |    Load    |
+| --------------- | ------------------ |
+| Help?           |  Display modal     |
+| Games           |  Display music quiz      |
+
+Links on nabar behaved as exptected.
+
+
+### Games Button
+
+Testing was performed to ensure the enter button on the landing page was hidden after click to display main content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Enter button on click  |  Hide landing page |
+
+Games button on nabar behaved as exptected.
+
+#### Games button whilst music quiz is displayed
+
+Testing was performed to ensure the games button on the landing page opens music quiz. Once music quiz is open the games button resets the quiz to start again. 
+
+| Music Quiz |   Load    |
+| --------------- | ------------------ |
+| Games button on click  |  Resets music quiz score |
+
+Games on nabar behaved as exptected, when music quiz was displayed.
+
+### Genre Buttons
+  #### Rock Button
+Testing was performed to ensure the rock button on the landing page was displayed artist carousel with rock artist content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Rock button on click  |  Hide landing page |
+|                       | Display artist profile with rock artist content inside     |
+
+#### Jazz Button
+Testing was performed to ensure the rock button on the landing page was displayed artist carousel with jazz artist content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Jazz button on click  |  Hide landing page |
+|                       | Display artist profile with jazz artist content inside     |
+
+#### Classical Button
+Testing was performed to ensure the rock button on the landing page was displayed artist carousel with classical artist content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Classical button on click  |  Hide landing page |
+|                       | Display artist profile with classical artist content inside     |
+
+#### Hip-hop Button
+Testing was performed to ensure the rock button on the landing page was displayed artist carousel with hip-hop artist content.
+
+| Landing Page |   Load    |
+| --------------- | ------------------ |
+| Hip-hop button on click  |  Hide landing page |
+|                       | Display artist profile with Hip-hop artist content inside     |
+
+All genre buttons behaved as exptected.
+
+### Restart button (Music-quiz)
+
+Testing was performed to ensure the restart button once music quiz is displayed reloads question for the music quiz and resets the score.
+
+| Music Quiz |   Load    |
+| --------------- | ------------------ |
+| Restart button on click  |  Resets music quiz  |
+
+Restart button on music quiz behaved as expected. 
+
+### Exit button (Music-quiz)
+
+Testing was performed to ensure the exit button once music quiz is displayed hides music quiz and displays the home page.
+
+| Music Quiz |   Load    |
+| --------------- | ------------------ |
+| Exit button on click  |  Hides music quiz  |
+|                       |  Displays home page content |
+
+Restart button on music quiz behaved as expected. 
+
+### Close button (Artist Profile Carousel)
+
+Testing was performed to ensure the close button on artist profile hides artist profile and displays home page. 
+
+| Artist Profile Carousel |   Load    |
+| --------------- | ------------------ |
+| Close button on click  |  Hide artist carousel |
+|                         |  Display home page|
+
+Close button behaved as expected. 
+
+### Close button (Artist Profile Fullscreen)
+
+Testing was performed to ensure the close button on artist profile in fullscreen mode exits fullscreen and display artist profile carousel. 
+
+| Artist Profile Fullscreen |   Load    |
+| --------------- | ------------------ |
+| Close button on click  |  Hide artist profile |
+|                         |  Display pre screen (artist carousel)|
+
+Close button did not behave as expected and was not visible on all artist profile cards when in full screen.
+
+### Music Quiz
+
+Tested using jest [Jest](https://jestjs.io/) and jsdom [Jsdom](https://github.com/jsdom/jsdom) to ensure consistant and reliable user experience. Used console.log used throughout my code to and fix bugs in Chrome dev tools [Chrome](https://developer.chrome.com/docs/devtools) 
+
+#### Quiz Start
+  - Confirmation that the quiz has started:
+
+    - Games button clicked
+      - Home page is hidden
+      - Quiz section is displayed
+      - First question correctly loaded from ```quizData``` array
+
+Initialisation of music quiz behaved as expected.
+
+```expect($("#home-page").hasClass("hidden")).toBe(true);```
+
+```expect($("#quiz-section").hasClass("hidden")).toBe(false);```
+
+```expect($("#quiz-question").text()).toContain(quizData[0].question);```
+
+#### Submit Answer
+  - Checks when user selects an answer triggered by click
+
+    - Correct answer, score increase by 1
+    - Incorrect andswer, score remains the same
+    - Post answer click the next question is displayed
+    - On last question final score is displayed
+    - Score resets to 0
+
+Answer submission for quiz questions behaved as expected. 
+
+```$("#quiz-options").val(correctAnswer);```
+
+```$("#submit-answer").trigger("click");```
+
+```expect(score).toBe(1);```
+
+```expect(currentQuestionIndex).toBe(1);```
+
+#### Display Score
+  - Checks when quiz is at final question and displays score
+
+    - Quiz section is hidden
+    - Score is displayed
+    - Message shows correct score number
+
+Score display for quiz questions behaved as expected. 
+
+```expect($("#quiz-section").hasClass("hidden")).toBe(true);```
+
+```expect($("#quiz-score").hasClass("hidden")).toBe(false);```
+
+```expect($("#score-message").text()).toContain("Your final score is");```
+
+#### Restart Button
+  - Confirms quiz has been reset
+
+    - Resets score index to 0
+    - Resets question index to 0
+    - Hides score screen
+    - Displays first question
+
+Restart button for quiz questions behaved as expected. 
+
+```expect(score).toBe(0);```
+
+```expect(currentQuestionIndex).toBe(0);```
+
+```expect($("#quiz-section").hasClass("hidden")).toBe(false);```
+
+```expect($("#quiz-score").hasClass("hidden")).toBe(true);```
+
+#### Artist Carousel Indicators
+**Starting carousel indicator state**
+  - Carousel component of the left and right arrows to navigate between artist profile cards
+
+    - Clicking the right indicator button shows the next artist carousel card 
+
+```$("#carousel-right").trigger("click");```
+
+```expect(currentArtistIndex).toBe(1);```
+
+    - Clicking the left indicator buttons shows the prev carousel card
+
+```$("#carousel-left").trigger("click");```
+
+```expect(currentArtistIndex).toBe(0);```
+
+**Wraparound Behaviour**
+  - Ensures right indicator wraps carousel to first artist on the last card
+
+```currentArtistIndex = 0;```
+
+```$("#carousel-left").trigger("click");```
+
+```expect(currentArtistIndex).toBe(2);```
+
+  - Ensures right indicator wraps carousel to last artist on the first card
+
+```currentArtistIndex = 2;```
+
+```$("#carousel-right").trigger("click");```
+
+```expect(currentArtistIndex).toBe(0);```
+
+Carousel indicators behaved as expected. 
+
+### Validator Testing 
+
+#### HTML
+ 
+- No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+
+![HTML Validator](docs/readme_images/html-validator-test)
+
+#### CSS
+
+- No errors were returned when passing through the official [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/validator)
+
+![CSS Validator](docs/readme_images/css-validator-test)
+
+### JavaScript
+- Multiple errors returned passing through offical [JShint checker](https://jshint.com/) 
+
+**Errors**
+
+| Line | Column | Source | Message |
+| 24| 42 | ("enter-btn")?**.**addEventListener| Unexpected token |
+| 37|   | bootstrap | undefined |
+| 352| 12 | selected === correct && score++; | Expected an assignment or function |
+| 355| 25 | ? (currentQuestion++, loadQuestion()) | undefined |
+| 454|   | module | undefined |
+| |   | $ | undefined |
+
+**Before Fixes**
+
+![JS Hint Errors](docs/readme_images/jshint-errors.webp)
+
+**After Fixes**
+- Fixes logged on commits
+
+![JS Hint Fixed](docs/readme_images/jshint-fixed.webp)
+
+### Unfixed Bugs
+
+#### Issue #1: Close button does not appear
+
+**Unfixed**: Close button does not display when artist profile card (carousel-cards) are shown. 
+
+#### Issue #2: Genre button 'classical'
+
+**Unfixed**: After site has been interacted with, clicking on genre but classical shows carousel starting with the last card.
+
+## Deployment 
+
+### Version Control
+
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Portfolio-Project-2-Poker-Fun’.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+### Deployment to Github Pages
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the menu on left select 'Pages'
+  - From the source section drop-down menu, select the Branch: main
+  - Click 'Save'
+  - A live link will be displayed in a green banner when published successfully.
+
+The live link can be found here - (https://chia-codes.github.io/muziqmatrix/)
+
+### Clone the Repository Code Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+## UX & UI Considerations
+
+This website is buit with a 'mobile first' thought pattern. As most online users are highly likey to view the sight through a mobile or tablet, a mobile first approach is essential to the user experience.
+The design follows the five planes of UX design:
+
+**Strategy** – Set user needs and goals to ensure the site serves the recruiter and site manager.
+**Scope** – Contain features such as the about, skills, and portfolio sections.
+**Structure** – Design a logical easy-to-use structure that invitews easy navigation and ease of access.
+**Skeleton** – Create wireframes to brainstorm and map out the layout the site.
+**Surface** – Develop an appealing unique site with an elegant color scheme and subtle design elements.
+
+## Credits
+
+### Code
+
+#### Stack Overflow.
+
+  - [Carousel Items Loop](https://stackoverflow.com/questions/72690608/carousel-slideshow-with-infinite-loop)
+
+    - Used to help navigate in creating a loop for the carousel cards in the artist profile section. 
+
+  - [Deal with localStorage in Jest](https://stackoverflow.com/questions/32911630/how-do-i-deal-with-localstorage-in-jest-tests)
+
+    - Used to workout how to mock html file during jest test.
+
+#### Code Camp
+
+  - [Fullscreen API in JavaScript](https://www.freecodecamp.org/news/how-use-full-screen-api-in-js/)
+
+    - Used to discover Webkit API and incorporate fullscreen transition.
+  ```if (this.requestFullscreen) {this.requestFullscreen();}```
+
+#### Code Pen 
+
+  - [Enhanced Futuristic Styling](https://codepen.io/dspstudio/pen/XJJNBrZ)
+
+    - Used to inspire the background and grid layout of the site. CSS background customised.
+
+    **WebVision Projects CSS**
+  ``` body{	background: radial-gradient(circle at center, #0f172a, #020617); min-height: 100vh; display: flex;justify-content: center; align-items: center;overflow: hidden; position: relative;}```
+
+    **Grid Background**
+  ``` body::before {content: ""; position: absolute;	top: 0;	left: 0;	right: 0;	bottom: 0;	background-image: linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),	linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px,transparent 1px);	background-size: 40px 40px;	background-position: center center;	perspective: 1000px; transform-style: preserve-3d;	animation: gridMove 60s linear infinite; } ```
+
+#### Jest 29.7
+
+  - [Writing Test](https://jestjs.io/)
+
+    - Used to set up learn, rewrite tests
+
+``` beforeAll(() => {```  
+
+```let fs = require("fs");```  
+
+```let fileContents = fs.readFileSync("index.html", "utf-8");```
+
+```document.body.innerHTML = fileContents;})``` 
+
+```test("Jest should pass 1 test", () => { expect(1 + 1).toBe(2);});```
+
+#### Google 
+
+  - [Google](https://www.google.com)
+
+    - Google fonts for styling https://fonts.google.com/
+    - Chrome Developers used to read, discover and learn how different codes used, for this website implementing 'preload' & 'preconnect' https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules
+    - Chrome DevTools, lighthouse used to test and examin code performance and accessibility.
+
+#### Canva 
+  -[Canva](https://www.canva.com/)
+  
+    - Used to create favicon for site branding.
+
+#### Favicon.io
+
+  - [Favicon](https://favicon.io/favicon-converter/)
+
+    - Used to convert icon sizes to have icon across all devices. 
+
+
+### Content
+
+- All text for the website was written by myself.
+
+### Media
+
+- [Night Cafe](https://creator.nightcafe.studio/)
+
+  - All images for the website were obtained from Nightcafe.
+
+#### Coders Notes:
+1# Thank you for taking the time to go through my first solo project using javascript. I aim to improve this over time and creat a strutured platform for music artist to promote themselves.
