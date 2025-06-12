@@ -562,13 +562,13 @@ Restart button for quiz questions behaved as expected.
 **Starting carousel indicator state**
   - Carousel component of the left and right arrows to navigate between artist profile cards
 
-    - Clicking the right indicator button shows the next artist carousel card 
+    - Clicking the right indicator button shows the next artist carousel card
+    - Clicking the left indicator buttons shows the prev carousel card
 
 ```$("#carousel-right").trigger("click");```
 
 ```expect(currentArtistIndex).toBe(1);```
 
-    - Clicking the left indicator buttons shows the prev carousel card
 
 ```$("#carousel-left").trigger("click");```
 
@@ -599,26 +599,27 @@ Carousel indicators behaved as expected.
  
 - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
 
-![HTML Validator](docs/readme_images/testing/html-validator-test.webp)
+![HTML Validator](docs/testing/html-validator-test.webp)
 
 #### CSS
 
 - No errors were returned when passing through the official [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/validator)
 
-![CSS Validator](docs/readme_images/testing/css-validator-test)
+![CSS Validator](docs/testing/css-validator.webp)
 
 ### JavaScript
 - Multiple errors returned passing through offical [JShint checker](https://jshint.com/) 
 
 **Errors**
 
-| Line | Column | Source | Message |
-| 24| 42 | ("enter-btn")?**.**addEventListener| Unexpected token |
-| 37|   | bootstrap | undefined |
-| 352| 12 | selected === correct && score++; | Expected an assignment or function |
-| 355| 25 | ? (currentQuestion++, loadQuestion()) | undefined |
-| 454|   | module | undefined |
-| |   | $ | undefined |
+| Line| Column | Source | Message |
+| --------------- | --------------- | --------------- | --------------- |
+| 24  | 42 | ("enter-btn")?**.**addEventListener| Unexpected token |
+| 37  |    | bootstrap | undefined |
+| 352 | 12 | selected === correct && score++; | Expected an assignment or function |
+| 355 | 25 | ? (currentQuestion++, loadQuestion()) | undefined |
+| 454 |     | module | undefined |
+|     |     | $ | undefined |
 
 **Before Fixes**
 
@@ -631,7 +632,7 @@ Carousel indicators behaved as expected.
 
 **Lighthouse**
 
-![Dev Tool Lighthouse](docs/testing/lighthosue-test.webp)
+![Dev Tool Lighthouse](docs/testing/lighthouse-test.webp)
 
 ### Unfixed Bugs
 
