@@ -169,6 +169,12 @@ body::before {
 }
 
 /* Artist Profiles */
+
+.artist-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .carousel-container {
   position: relative;
   overflow: hidden;
