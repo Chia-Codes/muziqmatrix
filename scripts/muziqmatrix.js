@@ -16,16 +16,21 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to hide landing page when enter button is clicked
-const enterBtn = () => {
+const enterBtn = function ()  {
   ["landing-page", "canvas"].forEach(
     (id) => (document.getElementById(id).style.display = "none")
   );
-  $(".navbar").removeClass("hidden");
+  document.querySelector(".navbar").classList.remove("hidden");
 };
 
 // Enter button function
-const enterBtnClick = () =>
-  document.getElementById("enter-btn")?.addEventListener("click", enterBtn);
+const enterBtnClick = () => {
+  var enterButton = document.getElementById("enter-btn");
+    if (enterButton) {
+      enterButton.addEventListener("click", enterBtn);
+    }
+};
+
 // Call function for event listener
 enterBtnClick();
 
@@ -41,12 +46,22 @@ function helpNavModal() {
   });
 }
 
+//Games Button
+//Show quiz container when games button is clicked
+const gamesBtn = () => {
+  document.getElementById("rock-btn").addEventListener("click", function () {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("artist-profiles").classList.remove("hidden");
+});
+};
+
 //Genre button functions
 //Rock button
 function rockBtn() {
-  $("#rock-btn").on("click", function () {
-    $("#home").addClass("hidden");
-    $("#artist-profiles").removeClass("hidden");
+ document.getElementById("rock-btn").addEventListener("click", function () {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("artist-profiles").classList.remove("hidden");
+
     artistNavbar();
 
     // Card1
@@ -106,7 +121,7 @@ function rockBtn() {
 
 //Jazz button
 function jazzBtn() {
-  $("#jazz-btn").on("click", function () {
+  document.getElementById("jazz-btn").addEventListener("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
@@ -165,7 +180,7 @@ function jazzBtn() {
 
 //Classical button
 function classicalBtn() {
-  $("#classical-btn").on("click", function () {
+  document.getElementById("classical-btn").addEventListener("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
@@ -214,7 +229,7 @@ function classicalBtn() {
 
 //Hip Hop button
 function hiphopBtn() {
-  $("#hiphop-btn").on("click", function () {
+  document.getElementById("hiphop-btn").addEventListener("click", function () {
     $("#home").addClass("hidden");
     $("#artist-profiles").removeClass("hidden");
     artistNavbar();
@@ -346,16 +361,7 @@ $(".carousel-card").on("click", function () {
   }
 });
 
-
 //Music Quiz
-//Show quiz container when games button is clicked
-const gamesBtn = () => {
-  $(".games-btn").on("click", () => $("#quiz-container").removeClass("hidden"));
-  //Hide home page & content when games button is clicked
-  $(".games-btn").on("click", () => $("#home").addClass("hidden"));
-  //Call reset quiz until more games are added
-  $(".games-btn").on("click", () => resetQuiz());
-};
 
 let currentQuestion = 0;
 let score = 0;
