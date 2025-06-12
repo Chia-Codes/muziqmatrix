@@ -648,6 +648,10 @@ Carousel indicators behaved as expected.
 
 **Unfixed**: The image third carousel card sits to the left of its container and does reach the same width as the others. 
 
+#### Issue #4: Upgrade Button on Modal
+
+**Unfixed**: The upgrade now button is not a working funciton, currently being built. 
+
 ## Deployment 
 
 ### Version Control
