@@ -50,7 +50,7 @@ $("#upgrade-btn").on("click", () => {
   $("body").html(`
     <section style="text-align: center; padding: 4rem;">
       <h1 style="font-size: 4rem;">401</h1>
-      <p style="font-size: 1.5rem;">Oops! Your unauthorised for an upgrade.</p>
+      <p style="font-size: 1.5rem;">Oops! You're unauthorised for an upgrade.</p>
       <a href="index.html" class="btn btn-primary mt-4">Return to base</a>
     </section>
   `);
