@@ -177,10 +177,6 @@ body::before {
   box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
   padding: 2rem;
-
-  /* Scrolling for iphone devices */
-   overflow-x: auto;
-  scroll-snap-type: x mandatory;
 }
 
 .carousel-card {
@@ -191,13 +187,7 @@ body::before {
   border: 2px solid var(--primary-color);
   box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
-  font-family: var(--primary-font);
-
-  /* Contribute to scrolling on iphone */
-  scroll-snap-align: start;
-  flex: 0 0 80%; /* or your card width */
-  margin-right: 20px; /* gap between cards */
-  
+  font-family: var(--primary-font); 
 }
 
 /* Control images replaced by js */
@@ -333,6 +323,19 @@ footer {
   #artist-profiles {
     width: 323px;
     height: 800px;
+  }
+
+  .carousel-container {
+  /* Scrolling for iphone devices */
+   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  }
+
+  .carousel-card {
+      /* Contribute to scrolling on iphone */
+  scroll-snap-align: start;
+  flex: 0 0 80%; /* or your card width */
+  margin-right: 20px; /* gap between cards */
   }
 }
 

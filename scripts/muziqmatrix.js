@@ -41,7 +41,7 @@ function helpNavModal() {
   // Show modal on click
   $helpLink.on("click", function (e) {
     e.preventDefault();
-    const modal = new bootstrap.Modal(document.getElementById("help-modal"));
+    const modal = new bootstrap.Modal(document.getElementById("get-modal"));
     modal.show();
   });
 }
@@ -82,13 +82,13 @@ function rockBtn() {
       .first()
       .attr(
         "src",
-        "https://creator.nightcafe.studio/jobs/xACAty33yiYLhilWWSje/xACAty33yiYLhilWWSje--1--hi4kq.jpg"
+        "https://shorturl.at/71eFq"
       );
     //h3
     $("#card1 h3").text("Rocky Runs Legacy");
     //paragragh
     $("#card1 p").text(
-      "Born of Earth, forged among stars — Rocky Runs Legacy is more than a name, it’s a force! A legacy not bound by time or planet, but pulsing through space with rhythm, rebellion, and raw power."
+      "Born of Earth, forged among stars — Rocky Runs Legacy is more than a name, it’s a force! Rhythm, rebellion, and raw power."
     );
     //Award tags
     $("#card1-tag1").text("Universal Legacy Awards 3079");
@@ -100,13 +100,13 @@ function rockBtn() {
       .first()
       .attr(
         "src",
-        "https://images.nightcafe.studio/jobs/61leN4iNbacrNdcpssKj/61leN4iNbacrNdcpssKj--1--1ef60.jpg"
+        "https://shorturl.at/EjIyV"
       );
     //h3
     $("#card2 h3").text("Polly-Hendrix");
     //paragragh
     $("#card2 p").text(
-      "Half alien, half sheep, fully electric — Polly-Hendrix is a solo artist who blends woolly innocence with cosmic energy. Expect bleats, beats, and interstellar soul in every track."
+      "Half alien, half sheep, fully electric — Polly-Hendrix is a solo artist who blends woolly innocence with cosmic energy."
     );
     //Award tags
     $("#card2-tag1").text("Solo Fleet Awards");
@@ -117,13 +117,13 @@ function rockBtn() {
       .first()
       .attr(
         "src",
-        "https://cdn.shopify.com/s/files/1/0270/2671/8799/files/wgGnras2IqKuOEplO1jp_6x_1b363f14-2d94-4167-a454-f9e7640fea0b_1024x1024.jpg?v=1645849892"
+        "https://shorturl.at/07r4l"
       );
     //h3
     $("#card3 h3").text("Dead-Nan's Tent");
     //paragragh
     $("#card3 p").text(
-      "A nomadic act wrapped in velvet curtains and static dreams, Dead-Nan’s Tent channels lo-fi lullabies, forgotten radio signals, and stories only the stars remember. "
+      "A nomadic act wrapped in velvet curtains and static dreams, Dead-Nan’s Tent channels lo-fi lullabies. "
     );
     //Award tags
     $("#card3-tag1").text("Universal Legacy Awards 8879");
@@ -143,7 +143,7 @@ function jazzBtn() {
       .first()
       .attr(
         "src",
-        "https://creator.nightcafe.studio/jobs/383E6W3deCj6uVMdxRbk/383E6W3deCj6uVMdxRbk--1--1h1xv.jpg"
+        "https://shorturl.at/zj25d"
       );
     //h3
     $("#card1 h3").text("Aretha Frenchin");
@@ -160,13 +160,13 @@ function jazzBtn() {
       .first()
       .attr(
         "src",
-        "https://creator.nightcafe.studio/jobs/jqkeyRgTwTtujK5urQgR/jqkeyRgTwTtujK5urQgR--1--sc6qc.jpg"
+        "https://shorturl.at/Xj4En"
       );
     //h3
     $("#card2 h3").text("Skipadi-bop-ba");
     //paragragh
     $("#card2 p").text(
-      "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul, they turn every stage into a smoky back-alley jazz den where the unexpected is the norm."
+      "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul."
     );
     //Award tags card2
     $("#card2-tag2").addClass("hidden");
@@ -210,7 +210,7 @@ function classicalBtn() {
       $("#card1 h3").text("Baitheaven");
       //paragragh
       $("#card1 p").text(
-        "This raccoon band’s energetic performances blend playful mischief with tight musicianship, creating a sound that’s both untamed and unforgettable."
+        "This raccoon band’s energetic performances blend playful mischief with tight musicianship."
       );
       // Card2
       $("#card2 img")
@@ -223,7 +223,7 @@ function classicalBtn() {
       $("#card2 h3").text("DreamOn");
       //paragragh
       $("#card2 p").text(
-        "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul, they turn every stage into a smoky back-alley jazz den where the unexpected is the norm."
+        "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul."
       );
       //Card3
       $("#card3 img")
@@ -259,7 +259,7 @@ function hiphopBtn() {
     $("#card1 h3").text("LDY Trible");
     //paragragh
     $("#card1 p").text(
-      "With a commanding presence and heartfelt lyrics, she brings raw emotion and depth to every performance, inviting audiences into a world where jazz meets personal truth."
+      "With a commanding presence and heartfelt lyrics, she brings raw emotion and depth to every performance."
     );
     // Card2
     $("#card2 img")
@@ -272,7 +272,7 @@ function hiphopBtn() {
     $("#card2 h3").text("DJ Fleet");
     //paragragh
     $("#card2 p").text(
-      "Known for his lightning-fast mixes and seamless transitions, he’s a master at reading the crowd and delivering high-energy sets that bridge genres and generations."
+      "Known for his lightning-fast mixes and seamless transitions, high-energy sets that bridge genres and generations."
     );
     //Card3
     $("#card3 img")
@@ -285,7 +285,7 @@ function hiphopBtn() {
     $("#card3 h3").text("A.W.A");
     //paragragh
     $("#card3 p").text(
-      "This extraterrestrial crew isn’t here to phone home—they’re here to make noise. Aliens With Attitude: out of this world, unapologetically loud."
+      "This extraterrestrial crew isn’t here to phone home—they’re here to make noise. Unapologetically loud."
     );
   });
 }
