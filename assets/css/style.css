@@ -177,6 +177,11 @@ body::before {
   box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
   padding: 2rem;
+
+  /* Scrolling for iphone devices */
+   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-card {
@@ -188,6 +193,12 @@ body::before {
   box-shadow: 0 0 15px var(--primary-color);
   border-radius: 10px;
   font-family: var(--primary-font);
+
+  /* Contribute to scrolling on iphone */
+  scroll-snap-align: start;
+  flex: 0 0 80%; /* or your card width */
+  margin-right: 20px; /* gap between cards */
+  
 }
 
 /* Control images replaced by js */
