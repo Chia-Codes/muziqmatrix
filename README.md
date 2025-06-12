@@ -2,7 +2,9 @@
 
 ## Milestone Project 2
 
-- This project aims to build an interactive front end website using HTML CSS and javaScript.
+**This intent for creating Muziqmatrix site is to portfolio my skills working with JavaScript, I am keen to keep improving this site's build**
+
+- This project aims to build an interactive front end website using HTML CSS and JavaScript.
 - I have decided to build a website tech-savy music explorers. Who'd like to discover new music artist and knowledge through triva and visual   engagement.
 - My web page consists of:
   
