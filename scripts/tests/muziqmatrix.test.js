@@ -69,6 +69,17 @@ describe("Navbar helplink test", () => {
   });
 });
 
+describe("Upgrade button simulates 404 error page", () => {
+  test("clicking Upgrade Now redirects to 404.html", () => {
+    delete window.location;
+    window.location = { href: "" }; // Mock window.location
+
+    $("#upgrade-btn").trigger("click");
+
+    expect(window.location.href).toContain("404");
+  });
+}); 
+
 // Games Button
 describe("Games button tests", () => {
   // Test for home page to be hidden

@@ -25,7 +25,7 @@
     font-family: var(--primary-font);
     color: var(--primary-color);
     background: radial-gradient(circle at center, #0f2a28, #021117);
-    text-shadow: #4bec2a 0px 0px 10px;
+    text-shadow: var(--primary-color) 0px 0px 10px;
     
     
     /* Center content and help push foot to page bottom */
@@ -60,7 +60,7 @@ body::before {
     padding: 15px;
     font-family: var(--secondary-font); 
     background: radial-gradient(circle at center, #0f2a28, #021117);
-    box-shadow: #215016 0px 0px 10px;
+    box-shadow: var(--container-text-color) 0px 0px 10px;
 
     /* Display items at either end of the navbar */
     display: flex;
@@ -110,7 +110,7 @@ body::before {
 /* Landing page */
     #landing-page {
     font-family: var(--secondary-font);
-    background: #000;
+    background: var(--secondary-color);
 
     /* Center the landing page content */
     display: flex;
@@ -137,7 +137,7 @@ body::before {
     font-size: 1.5rem;
     border-radius: 45px;
     /* Ensure background color on page load*/
-    background: #000;
+    background: var(--secondary-color);
 }
 
 /* Main Content */
@@ -181,7 +181,6 @@ body::before {
   /* Scrolling for iphone devices */
    overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-card {

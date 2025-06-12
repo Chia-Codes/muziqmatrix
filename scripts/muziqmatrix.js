@@ -46,13 +46,24 @@ function helpNavModal() {
   });
 }
 
+$("#upgrade-btn").on("click", () => {
+  $("body").html(`
+    <section style="text-align: center; padding: 4rem;">
+      <h1 style="font-size: 4rem;">401</h1>
+      <p style="font-size: 1.5rem;">Oops! Your unauthorised for an upgrade.</p>
+      <a href="index.html" class="btn btn-primary mt-4">Return to base</a>
+    </section>
+  `);
+});
+
 //Games Button
 //Show quiz container when games button is clicked
 const gamesBtn = () => {
-  document.getElementById("rock-btn").addEventListener("click", function () {
-    document.getElementById("home").classList.add("hidden");
-    document.getElementById("artist-profiles").classList.remove("hidden");
-});
+  $(".games-btn").on("click", () => $("#quiz-container").removeClass("hidden"));
+  //Hide home page & content when games button is clicked
+  $(".games-btn").on("click", () => $("#home").addClass("hidden"));
+  //Call reset quiz until more games are added
+  $(".games-btn").on("click", () => resetQuiz());
 };
 
 //Genre button functions
