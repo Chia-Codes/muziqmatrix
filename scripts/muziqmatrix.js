@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to hide landing page when enter button is clicked
-const enterBtn = function ()  {
+const enterBtn = function () {
   ["landing-page", "canvas"].forEach(
     (id) => (document.getElementById(id).style.display = "none")
   );
@@ -26,9 +26,9 @@ const enterBtn = function ()  {
 // Enter button function
 const enterBtnClick = () => {
   var enterButton = document.getElementById("enter-btn");
-    if (enterButton) {
-      enterButton.addEventListener("click", enterBtn);
-    }
+  if (enterButton) {
+    enterButton.addEventListener("click", enterBtn);
+  }
 };
 
 // Call function for event listener
@@ -46,6 +46,7 @@ function helpNavModal() {
   });
 }
 
+// Upgrade button on modal
 $("#upgrade-btn").on("click", () => {
   $("body").html(`
     <section style="text-align: center; padding: 4rem;">
@@ -69,7 +70,7 @@ const gamesBtn = () => {
 //Genre button functions
 //Rock button
 function rockBtn() {
- document.getElementById("rock-btn").addEventListener("click", function () {
+  document.getElementById("rock-btn").addEventListener("click", function () {
     document.getElementById("home").classList.add("hidden");
     document.getElementById("artist-profiles").classList.remove("hidden");
 
@@ -191,51 +192,53 @@ function jazzBtn() {
 
 //Classical button
 function classicalBtn() {
-  document.getElementById("classical-btn").addEventListener("click", function () {
-    $("#home").addClass("hidden");
-    $("#artist-profiles").removeClass("hidden");
-    artistNavbar();
-    // Card1
-    //img
-    $("#card1 img")
-      .first()
-      .attr(
-        "src",
-        "https://creator.nightcafe.studio/jobs/LsUfJrcKRat1P4uwDIGF/LsUfJrcKRat1P4uwDIGF--1--h88tb.jpg"
+  document
+    .getElementById("classical-btn")
+    .addEventListener("click", function () {
+      $("#home").addClass("hidden");
+      $("#artist-profiles").removeClass("hidden");
+      artistNavbar();
+      // Card1
+      //img
+      $("#card1 img")
+        .first()
+        .attr(
+          "src",
+          "https://creator.nightcafe.studio/jobs/LsUfJrcKRat1P4uwDIGF/LsUfJrcKRat1P4uwDIGF--1--h88tb.jpg"
+        );
+      //h3
+      $("#card1 h3").text("Baitheaven");
+      //paragragh
+      $("#card1 p").text(
+        "This raccoon band’s energetic performances blend playful mischief with tight musicianship, creating a sound that’s both untamed and unforgettable."
       );
-    //h3
-    $("#card1 h3").text("Baitheaven");
-    //paragragh
-    $("#card1 p").text(
-      "This raccoon band’s energetic performances blend playful mischief with tight musicianship, creating a sound that’s both untamed and unforgettable."
-    );
-    // Card2
-    $("#card2 img")
-      .first()
-      .attr(
-        "src",
-        "https://creator.nightcafe.studio/jobs/01LI47XsNC3T4GNM4rFe/01LI47XsNC3T4GNM4rFe--1--bpl4q.jpg"
+      // Card2
+      $("#card2 img")
+        .first()
+        .attr(
+          "src",
+          "https://creator.nightcafe.studio/jobs/01LI47XsNC3T4GNM4rFe/01LI47XsNC3T4GNM4rFe--1--bpl4q.jpg"
+        );
+      //h3
+      $("#card2 h3").text("DreamOn");
+      //paragragh
+      $("#card2 p").text(
+        "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul, they turn every stage into a smoky back-alley jazz den where the unexpected is the norm."
       );
-    //h3
-    $("#card2 h3").text("DreamOn");
-    //paragragh
-    $("#card2 p").text(
-      "With a signature mix of gritty horns, tight rhythms, and a splash of rebellious soul, they turn every stage into a smoky back-alley jazz den where the unexpected is the norm."
-    );
-    //Card3
-    $("#card3 img")
-      .first()
-      .attr(
-        "src",
-        "https://creator.nightcafe.studio/jobs/ZrcjCilNCVHjHbUyYTjO/ZrcjCilNCVHjHbUyYTjO--1--gt8fv.jpg"
+      //Card3
+      $("#card3 img")
+        .first()
+        .attr(
+          "src",
+          "https://creator.nightcafe.studio/jobs/ZrcjCilNCVHjHbUyYTjO/ZrcjCilNCVHjHbUyYTjO--1--gt8fv.jpg"
+        );
+      //h3
+      $("#card3 h3").text("Nobody Ochestra");
+      //paragragh
+      $("#card3 p").text(
+        "Their music drifts between shadow and light, crafting immersive experiences that invite listeners to explore the unseen corners of sound."
       );
-    //h3
-    $("#card3 h3").text("Nobody Ochestra");
-    //paragragh
-    $("#card3 p").text(
-      "Their music drifts between shadow and light, crafting immersive experiences that invite listeners to explore the unseen corners of sound."
-    );
-  });
+    });
 }
 
 //Hip Hop button
@@ -349,7 +352,7 @@ $(".carousel-card").on("click", function () {
   // Handle close button click
   closeBtn.on("click", function (e) {
     // Prevent default
-    e.stopPropagation(); 
+    e.stopPropagation();
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) {
@@ -357,10 +360,10 @@ $(".carousel-card").on("click", function () {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
- closeBtn.hide();
+    closeBtn.hide();
   });
 });
-  
+
 //Webkit API requesting full screen on carousel cards
 $(".carousel-card").on("click", function () {
   if (this.requestFullscreen) {
@@ -388,7 +391,9 @@ function loadQuestion() {
   $("#quiz-options").html(optionsHtml);
 
   // Show current question number
-  $("#question-number").text(`Question ${currentQuestion + 1} of ${quizData.length}`);
+  $("#question-number").text(
+    `Question ${currentQuestion + 1} of ${quizData.length}`
+  );
 }
 
 // Load options for the displaed question
@@ -409,16 +414,16 @@ $("#quiz-options").on("click", ".option-btn", (e) => {
   const selected = $(e.target).text();
   const correct = quizData[currentQuestion].answer[0];
   //score++ will only run if correct answer is selected
-    if (selected === correct) {
-      score++;
-    }
+  if (selected === correct) {
+    score++;
+  }
   // loadQuestion is called unless its the last one
   if (currentQuestion < quizData.length - 1) {
-  currentQuestion++;
-  loadQuestion();
-} else {
-  showScore(score, quizData.length);
-}
+    currentQuestion++;
+    loadQuestion();
+  } else {
+    showScore(score, quizData.length);
+  }
 });
 
 // Show score function

@@ -5,7 +5,7 @@
 const $ = require("jquery");
 global.$ = $;
 
-//Mock bootsrap modal for testing 
+//Mock bootsrap modal for testing
 global.bootstrap = {
   Modal: jest.fn().mockImplementation(() => ({
     show: jest.fn(),
@@ -52,7 +52,7 @@ describe("Landing page tests", () => {
     btn.click();
     expect(document.getElementById("landing-page").style.display).toBe("none");
     expect(document.getElementById("canvas").style.display).toBe("none");
-    expect($("#nav").hasClass("hidden")).toBe(false)
+    expect($("#nav").hasClass("hidden")).toBe(false);
   });
 });
 
@@ -62,7 +62,9 @@ describe("Navbar helplink test", () => {
     helpNavModal();
     $("#help-link").trigger("click");
 
-    expect(bootstrap.Modal).toHaveBeenCalledWith(document.getElementById("help-modal"));
+    expect(bootstrap.Modal).toHaveBeenCalledWith(
+      document.getElementById("help-modal")
+    );
 
     const modalInstance = bootstrap.Modal.mock.results[0].value;
     expect(modalInstance.show).toHaveBeenCalled();
@@ -78,7 +80,7 @@ describe("Upgrade button simulates 401 error page", () => {
 
     expect(window.location.href).toContain("401");
   });
-}); 
+});
 
 // Games Button
 describe("Games button tests", () => {
@@ -261,9 +263,9 @@ describe("Music quiz tests", () => {
     );
   });
   test("displays current question number in format 'Question X of Y'", () => {
-  loadQuestion(); // assume currentQuestion is 0 at start
-  const questionText = $("#question-number").text();
-  expect(questionText).toBe(`Question 1 of ${quizData.length}`);
+    loadQuestion(); // assume currentQuestion is 0 at start
+    const questionText = $("#question-number").text();
+    expect(questionText).toBe(`Question 1 of ${quizData.length}`);
   });
   test("returns to home page when Return Home is clicked", () => {
     $("#return-home-btn").trigger("click");
