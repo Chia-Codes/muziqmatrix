@@ -69,14 +69,14 @@ describe("Navbar helplink test", () => {
   });
 });
 
-describe("Upgrade button simulates 404 error page", () => {
-  test("clicking Upgrade Now redirects to 404.html", () => {
+describe("Upgrade button simulates 401 error page", () => {
+  test("clicking Upgrade Now redirects to 401.html", () => {
     delete window.location;
-    window.location = { href: "" }; // Mock window.location
+    window.location = { href: "401.html" }; // Mock window.location
 
     $("#upgrade-btn").trigger("click");
 
-    expect(window.location.href).toContain("404");
+    expect(window.location.href).toContain("401");
   });
 }); 
 
