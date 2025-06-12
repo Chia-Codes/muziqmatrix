@@ -654,6 +654,10 @@ Carousel indicators behaved as expected.
 
 **Unfixed**: The upgrade now button is not a working funciton, currently being built. 
 
+#### Issue #5: Jazz Button Carousel
+
+**Unfixed**: When first click of button carousel state displays on the last card first. 
+
 ## Deployment 
 
 ### Version Control
